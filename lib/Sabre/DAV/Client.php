@@ -534,9 +534,9 @@ class Client {
 
         // Fixes an XXE vulnerability on PHP versions older than 5.3.23 or
         // 5.4.13.
-        $previous = libxml_disable_entity_loader(true);
+        libxml_set_external_entity_loader(function() { return null; });
         $responseXML = simplexml_load_string($body, null, LIBXML_NOBLANKS | LIBXML_NOCDATA);
-        libxml_disable_entity_loader($previous);
+        libxml_set_external_entity_loader(null);
 
         if ($responseXML===false) {
             throw new \InvalidArgumentException('The passed data is not valid XML');

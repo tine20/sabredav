@@ -623,14 +623,14 @@ class Plugin extends DAV\ServerPlugin {
 
         // Fixes an XXE vulnerability on PHP versions older than 5.3.23 or
         // 5.4.13.
-        $previous = libxml_disable_entity_loader(true);
+        libxml_set_external_entity_loader(function() { return null; });
 
 
         $xml = simplexml_load_string(
             DAV\XMLUtil::convertDAVNamespace($body),
             null,
             LIBXML_NOWARNING);
-        libxml_disable_entity_loader($previous);
+        libxml_set_external_entity_loader(null);
 
         $xml->registerXPathNamespace('d','urn:DAV');
         $lockInfo = new LockInfo();
