@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
 class TestUtil {
 

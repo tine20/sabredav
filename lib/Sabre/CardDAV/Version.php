@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 /**
  * Version Class
  *
- * This class contains the Sabre\CardDAV version information
+ * This class contains the Tine20\CardDAV version information
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 class ExceptionTest extends \PHPUnit_Framework_TestCase {
 
@@ -14,8 +14,8 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase {
     function testExceptionStatuses() {
 
         $c = array(
-            'Sabre\\DAV\\Exception\\NotAuthenticated'    => 401,
-            'Sabre\\DAV\\Exception\\InsufficientStorage' => 507,
+            'Tine20\\DAV\\Exception\\NotAuthenticated'    => 401,
+            'Tine20\\DAV\\Exception\\InsufficientStorage' => 507,
         );
 
         foreach($c as $class=>$status) {

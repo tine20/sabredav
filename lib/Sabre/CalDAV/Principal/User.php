@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
-use Sabre\DAV;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV\Principal;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 /**
  * CalDAV principal

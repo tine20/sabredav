@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\DAVACL\PrincipalBackend;
+namespace Tine20\DAVACL\PrincipalBackend;
 
 /**
  * Implement this interface to create your own principal backends.
  *
  * Creating backends for principals is entirely optional. You can also
- * implement Sabre\DAVACL\IPrincipal directly. This interface is used solely by
- * Sabre\DAVACL\AbstractPrincipalCollection.
+ * implement Tine20\DAVACL\IPrincipal directly. This interface is used solely by
+ * Tine20\DAVACL\AbstractPrincipalCollection.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)

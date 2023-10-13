@@ -23,33 +23,33 @@ $tmpDir = 'tmpdata';
 require_once 'vendor/autoload.php';
 
 // Create the root node
-$root = new \Sabre\DAV\FS\Directory($publicDir);
+$root = new \Tine20\DAV\FS\Directory($publicDir);
 
 // The rootnode needs in turn to be passed to the server class
-$server = new \Sabre\DAV\Server($root);
+$server = new \Tine20\DAV\Server($root);
 
 if (isset($baseUri))
     $server->setBaseUri($baseUri);
 
 // Support for LOCK and UNLOCK
-$lockBackend = new \Sabre\DAV\Locks\Backend\File($tmpDir . '/locksdb');
-$lockPlugin = new \Sabre\DAV\Locks\Plugin($lockBackend);
+$lockBackend = new \Tine20\DAV\Locks\Backend\File($tmpDir . '/locksdb');
+$lockPlugin = new \Tine20\DAV\Locks\Plugin($lockBackend);
 $server->addPlugin($lockPlugin);
 
 // Support for html frontend
-$browser = new \Sabre\DAV\Browser\Plugin();
+$browser = new \Tine20\DAV\Browser\Plugin();
 $server->addPlugin($browser);
 
 // Automatically guess (some) contenttypes, based on extesion
-$server->addPlugin(new \Sabre\DAV\Browser\GuessContentType());
+$server->addPlugin(new \Tine20\DAV\Browser\GuessContentType());
 
 // Authentication backend
-$authBackend = new \Sabre\DAV\Auth\Backend\File('.htdigest');
-$auth = new \Sabre\DAV\Auth\Plugin($authBackend,'SabreDAV');
+$authBackend = new \Tine20\DAV\Auth\Backend\File('.htdigest');
+$auth = new \Tine20\DAV\Auth\Plugin($authBackend,'SabreDAV');
 $server->addPlugin($auth);
 
 // Temporary file filter
-$tempFF = new \Sabre\DAV\TemporaryFileFilterPlugin($tmpDir);
+$tempFF = new \Tine20\DAV\TemporaryFileFilterPlugin($tmpDir);
 $server->addPlugin($tempFF);
 
 // And off we go!

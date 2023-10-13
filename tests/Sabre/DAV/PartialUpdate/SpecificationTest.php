@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\DAV\PartialUpdate;
+namespace Tine20\DAV\PartialUpdate;
 
-use Sabre\DAV\FSExt\File;
-use Sabre\DAV\Server;
-use Sabre\HTTP;
+use Tine20\DAV\FSExt\File;
+use Tine20\DAV\Server;
+use Tine20\HTTP;
 
 /**
  * This test is an end-to-end sabredav test that goes through all
@@ -33,7 +33,7 @@ class SpecificationTest extends \PHPUnit_Framework_TestCase {
 
     public function tearDown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 

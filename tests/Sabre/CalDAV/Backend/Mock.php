@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
-use Sabre\DAV;
-use Sabre\CalDAV;
+namespace Tine20\CalDAV\Backend;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 class Mock extends AbstractBackend implements NotificationSupport, SharingSupport {
 
@@ -251,7 +251,7 @@ class Mock extends AbstractBackend implements NotificationSupport, SharingSuppor
      * Returns a list of notifications for a given principal url.
      *
      * The returned array should only consist of implementations of
-     * Sabre\CalDAV\Notifications\INotificationType.
+     * Tine20\CalDAV\Notifications\INotificationType.
      *
      * @param string $principalUri
      * @return array
@@ -271,7 +271,7 @@ class Mock extends AbstractBackend implements NotificationSupport, SharingSuppor
      * This may be called by a client once it deems a notification handled.
      *
      * @param string $principalUri
-     * @param Sabre\CalDAV\Notifications\INotificationType $notification
+     * @param Tine20\CalDAV\Notifications\INotificationType $notification
      * @return void
      */
     public function deleteNotification($principalUri, CalDAV\Notifications\INotificationType $notification) {
@@ -337,7 +337,7 @@ class Mock extends AbstractBackend implements NotificationSupport, SharingSuppor
      * Every element in this array should have the following properties:
      *   * href - Often a mailto: address
      *   * commonName - Optional, for example a first + last name
-     *   * status - See the Sabre\CalDAV\SharingPlugin::STATUS_ constants.
+     *   * status - See the Tine20\CalDAV\SharingPlugin::STATUS_ constants.
      *   * readOnly - boolean
      *   * summary - Optional, a description for the share
      *

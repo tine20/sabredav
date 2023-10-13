@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
- * @covers \Sabre\DAV\Tree
+ * @covers \Tine20\DAV\Tree
  */
 class TreeTest extends \PHPUnit_Framework_TestCase {
 

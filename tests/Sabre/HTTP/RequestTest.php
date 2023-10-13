@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 /**
- * @covers Sabre\HTTP\Request
+ * @covers Tine20\HTTP\Request
  */
 class RequestTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\HTTP\Request
+     * @var Tine20\HTTP\Request
      */
     private $request;
 

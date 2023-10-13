@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 class Mock implements BackendInterface {
 
@@ -11,9 +11,9 @@ class Mock implements BackendInterface {
     public $defaultUser = 'admin';
 
     /**
-     * @param Sabre\DAV\Server $server
+     * @param Tine20\DAV\Server $server
      * @param string $realm
-     * @throws Sabre\DAV\Exception\NotAuthenticated
+     * @throws Tine20\DAV\Exception\NotAuthenticated
      */
     function authenticate(DAV\Server $server, $realm) {
 

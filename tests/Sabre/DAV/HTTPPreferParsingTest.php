@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
-class HTTPPReferParsingTest extends \Sabre\DAVServerTest {
+class HTTPPReferParsingTest extends \Tine20\DAVServerTest {
 
     function testParseSimple() {
 

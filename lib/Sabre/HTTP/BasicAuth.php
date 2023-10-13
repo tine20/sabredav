@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 /**
  * HTTP Basic Authentication handler

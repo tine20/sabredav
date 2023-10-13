@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
+namespace Tine20\CalDAV\Notifications;
 
-use Sabre\CalDAV;
+use Tine20\CalDAV;
 
 class NodeTest extends \PHPUnit_Framework_TestCase {
 
@@ -83,7 +83,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotImplemented
+     * @expectedException Tine20\DAV\Exception\NotImplemented
      */
     function testSetACL() {
 

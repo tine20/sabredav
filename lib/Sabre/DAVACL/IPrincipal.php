@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * IPrincipal interface

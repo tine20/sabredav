@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
 

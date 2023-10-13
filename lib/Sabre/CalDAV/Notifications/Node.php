@@ -1,15 +1,15 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
+namespace Tine20\CalDAV\Notifications;
 
-use Sabre\DAV;
-use Sabre\CalDAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\CalDAV;
+use Tine20\DAVACL;
 
 /**
  * This node represents a single notification.
  *
- * The signature is mostly identical to that of Sabre\DAV\IFile, but the get() method
+ * The signature is mostly identical to that of Tine20\DAV\IFile, but the get() method
  * MUST return an xml document that matches the requirements of the
  * 'caldav-notifications.txt' spec.
 
@@ -22,14 +22,14 @@ class Node extends DAV\File implements INode, DAVACL\IACL {
     /**
      * The notification backend
      *
-     * @var Sabre\CalDAV\Backend\NotificationSupport
+     * @var Tine20\CalDAV\Backend\NotificationSupport
      */
     protected $caldavBackend;
 
     /**
      * The actual notification
      *
-     * @var Sabre\CalDAV\Notifications\INotificationType
+     * @var Tine20\CalDAV\Notifications\INotificationType
      */
     protected $notification;
 
@@ -81,7 +81,7 @@ class Node extends DAV\File implements INode, DAVACL\IACL {
 
     /**
      * This method must return an xml element, using the
-     * Sabre\CalDAV\Notifications\INotificationType classes.
+     * Tine20\CalDAV\Notifications\INotificationType classes.
      *
      * @return INotificationType
      */
@@ -175,7 +175,7 @@ class Node extends DAV\File implements INode, DAVACL\IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

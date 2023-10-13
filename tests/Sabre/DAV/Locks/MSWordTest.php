@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Locks;
+namespace Tine20\DAV\Locks;
 
-use Sabre\HTTP;
-use Sabre\DAV;
+use Tine20\HTTP;
+use Tine20\DAV;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/TestUtil.php';
@@ -55,7 +55,7 @@ class MSWordTest extends \PHPUnit_Framework_TestCase {
 
     function tearDown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 

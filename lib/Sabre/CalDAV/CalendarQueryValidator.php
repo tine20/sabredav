@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\VObject;
+use Tine20\VObject;
 use DateTime;
 
 /**
@@ -23,7 +23,7 @@ class CalendarQueryValidator {
     /**
      * Verify if a list of filters applies to the calendar data object
      *
-     * The list of filters must be formatted as parsed by \Sabre\CalDAV\CalendarQueryParser
+     * The list of filters must be formatted as parsed by \Tine20\CalDAV\CalendarQueryParser
      *
      * @param VObject\Component $vObject
      * @param array $filters
@@ -273,7 +273,7 @@ class CalendarQueryValidator {
             $check = (string)$check;
         }
 
-        $isMatching = \Sabre\DAV\StringUtil::textMatch($check, $textMatch['value'], $textMatch['collation']);
+        $isMatching = \Tine20\DAV\StringUtil::textMatch($check, $textMatch['value'], $textMatch['collation']);
 
         return ($textMatch['negate-condition'] xor $isMatching);
 
@@ -369,7 +369,7 @@ class CalendarQueryValidator {
                 }
 
             case 'VFREEBUSY' :
-                throw new \Sabre\DAV\Exception\NotImplemented('time-range filters are currently not supported on ' . $component->name . ' components');
+                throw new \Tine20\DAV\Exception\NotImplemented('time-range filters are currently not supported on ' . $component->name . ' components');
 
             case 'COMPLETED' :
             case 'CREATED' :
@@ -383,7 +383,7 @@ class CalendarQueryValidator {
 
 
             default :
-                throw new \Sabre\DAV\Exception\BadRequest('You cannot create a time-range filter on a ' . $component->name . ' component');
+                throw new \Tine20\DAV\Exception\BadRequest('You cannot create a time-range filter on a ' . $component->name . ' component');
 
         }
 

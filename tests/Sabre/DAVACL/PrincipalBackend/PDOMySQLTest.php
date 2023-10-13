@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\PrincipalBackend;
+namespace Tine20\DAVACL\PrincipalBackend;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 require_once 'Sabre/TestUtil.php';
@@ -13,7 +13,7 @@ class PDOMySQLTest extends AbstractPDOTest {
     function getPDO() {
 
         if (!SABRE_HASMYSQL) $this->markTestSkipped('MySQL driver is not available, or not properly configured');
-        $pdo = \Sabre\TestUtil::getMySQLDB();
+        $pdo = \Tine20\TestUtil::getMySQLDB();
         if (!$pdo) $this->markTestSkipped('Could not connect to MySQL database');
         $pdo->query("DROP TABLE IF EXISTS principals");
         $pdo->query("

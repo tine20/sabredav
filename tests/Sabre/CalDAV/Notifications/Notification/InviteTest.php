@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications\Notification;
+namespace Tine20\CalDAV\Notifications\Notification;
 
-use Sabre\CalDAV;
-use Sabre\DAV;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 class InviteTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Browser;
+namespace Tine20\DAV\Browser;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * GuessContentType plugin

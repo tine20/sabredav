@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Locks\Backend;
+namespace Tine20\DAV\Locks\Backend;
 
 require_once 'Sabre/TestUtil.php';
 
@@ -8,7 +8,7 @@ class FSTest extends AbstractTest {
 
     function getBackend() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
         mkdir(SABRE_TEMPDIR . '/locks');
         $backend = new FS(SABRE_TEMPDIR . '/locks/');
         return $backend;
@@ -17,7 +17,7 @@ class FSTest extends AbstractTest {
 
     function tearDown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 

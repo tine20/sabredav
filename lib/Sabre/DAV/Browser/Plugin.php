@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Browser;
+namespace Tine20\DAV\Browser;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Browser Plugin
@@ -31,12 +31,12 @@ class Plugin extends DAV\ServerPlugin {
      * @var array
      */
     public $iconMap = array(
-        'Sabre\\DAV\\IFile' => 'icons/file',
-        'Sabre\\DAV\\ICollection' => 'icons/collection',
-        'Sabre\\DAVACL\\IPrincipal' => 'icons/principal',
-        'Sabre\\CalDAV\\ICalendar' => 'icons/calendar',
-        'Sabre\\CardDAV\\IAddressBook' => 'icons/addressbook',
-        'Sabre\\CardDAV\\ICard' => 'icons/card',
+        'Tine20\\DAV\\IFile' => 'icons/file',
+        'Tine20\\DAV\\ICollection' => 'icons/collection',
+        'Tine20\\DAVACL\\IPrincipal' => 'icons/principal',
+        'Tine20\\CalDAV\\ICalendar' => 'icons/calendar',
+        'Tine20\\CardDAV\\IAddressBook' => 'icons/addressbook',
+        'Tine20\\CardDAV\\ICard' => 'icons/card',
     );
 
     /**
@@ -49,7 +49,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * reference to server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -400,7 +400,7 @@ class Plugin extends DAV\ServerPlugin {
 
         // We also know fairly certain that if an object is a non-extended
         // SimpleCollection, we won't need to show the panel either.
-        if (get_class($node)==='Sabre\\DAV\\SimpleCollection')
+        if (get_class($node)==='Tine20\\DAV\\SimpleCollection')
             return;
 
         $output.= '<tr><td colspan="2"><form method="post" action="">

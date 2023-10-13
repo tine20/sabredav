@@ -1,19 +1,19 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV;
+use Tine20\DAVACL;
 
 require_once 'Sabre/CalDAV/TestUtil.php';
 
 class CalendarTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CalDAV\Backend_PDO
+     * @var Tine20\CalDAV\Backend_PDO
      */
     protected $backend;
     protected $principalBackend;
     /**
-     * @var Sabre\CalDAV\Calendar
+     * @var Tine20\CalDAV\Calendar
      */
     protected $calendar;
     /**
@@ -88,7 +88,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      * @depends testSimple
      */
     function testGetChildNotFound() {
@@ -123,7 +123,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testCreateDirectory() {
 
@@ -132,7 +132,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetName() {
 
@@ -232,7 +232,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 

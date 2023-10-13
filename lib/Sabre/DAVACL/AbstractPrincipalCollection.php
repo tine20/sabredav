@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAVACL;
-use Sabre\DAV;
+namespace Tine20\DAVACL;
+use Tine20\DAV;
 
 /**
  * Principals Collection

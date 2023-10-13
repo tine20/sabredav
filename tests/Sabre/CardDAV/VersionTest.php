@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 class VersionTest extends \PHPUnit_Framework_TestCase {
 

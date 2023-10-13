@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 class CalendarQueryVAlarmTest extends \PHPUnit_Framework_TestCase {
 

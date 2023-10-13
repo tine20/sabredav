@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Mock;
+namespace Tine20\DAV\Mock;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Mock Collection.
@@ -13,7 +13,7 @@ use Sabre\DAV;
  * Every key a filename, every array value is either:
  *   * an array, for a sub-collection
  *   * a string, for a file
- *   * An instance of \Sabre\DAV\INode.
+ *   * An instance of \Tine20\DAV\INode.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)
@@ -102,7 +102,7 @@ class Collection extends DAV\Collection {
     /**
      * Returns an array with all the child nodes
      *
-     * @return \Sabre\DAV\INode[]
+     * @return \Tine20\DAV\INode[]
      */
     public function getChildren() {
 

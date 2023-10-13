@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
-use Sabre\HTTP;
-use Sabre\DAV;
+use Tine20\HTTP;
+use Tine20\DAV;
 
 /**
  * HTTP Digest authentication backend class

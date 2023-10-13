@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\FS;
+namespace Tine20\DAV\FS;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * File class

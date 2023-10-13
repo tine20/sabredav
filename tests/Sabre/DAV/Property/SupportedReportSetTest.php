@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/DAV/AbstractServer.php';
@@ -27,7 +27,7 @@ class SupportedReportSetTest extends DAV\AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Property\SupportedReportSet
+     * @covers Tine20\DAV\Property\SupportedReportSet
      */
     function testNoReports() {
 
@@ -60,7 +60,7 @@ class SupportedReportSetTest extends DAV\AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Property\SupportedReportSet
+     * @covers Tine20\DAV\Property\SupportedReportSet
      * @depends testNoReports
      */
     function testCustomReport() {

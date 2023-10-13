@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
 /**
  * Adds support for sharing features to a CalDAV server.
@@ -65,12 +65,12 @@ namespace Sabre\CalDAV\Backend;
  * change.
  * This notification is always represented by:
  *
- * Sabre\CalDAV\Notifications\Notification\Invite
+ * Tine20\CalDAV\Notifications\Notification\Invite
  *
  * In the case of an invite, the sharee may reply with an 'accept' or
  * 'decline'. These are always represented by:
  *
- * Sabre\CalDAV\Notifications\Notification\Invite
+ * Tine20\CalDAV\Notifications\Notification\Invite
  *
  *
  * Calendar access by sharees
@@ -156,7 +156,7 @@ namespace Sabre\CalDAV\Backend;
  * Selectively disabling publish or share feature
  * ==============================================
  *
- * If Sabre\CalDAV\Property\AllowedSharingModes is returned from
+ * If Tine20\CalDAV\Property\AllowedSharingModes is returned from
  * getCalendarsByUser, this allows the server to specify whether either sharing,
  * or publishing is supported.
  *
@@ -202,7 +202,7 @@ interface SharingSupport extends NotificationSupport {
      * Every element in this array should have the following properties:
      *   * href - Often a mailto: address
      *   * commonName - Optional, for example a first + last name
-     *   * status - See the Sabre\CalDAV\SharingPlugin::STATUS_ constants.
+     *   * status - See the Tine20\CalDAV\SharingPlugin::STATUS_ constants.
      *   * readOnly - boolean
      *   * summary - Optional, a description for the share
      *

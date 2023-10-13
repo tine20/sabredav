@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\VObject;
+use Tine20\DAV;
+use Tine20\VObject;
 
 /**
  * ICS Exporter
@@ -21,14 +21,14 @@ class ICSExportPlugin extends DAV\ServerPlugin {
     /**
      * Reference to Server class
      *
-     * @var \Sabre\DAV\Server
+     * @var \Tine20\DAV\Server
      */
     protected $server;
 
     /**
      * Initializes the plugin and registers event handlers
      *
-     * @param \Sabre\DAV\Server $server
+     * @param \Tine20\DAV\Server $server
      * @return void
      */
     public function initialize(DAV\Server $server) {

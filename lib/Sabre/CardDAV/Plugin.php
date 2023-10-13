@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
-use Sabre\VObject;
+use Tine20\DAV;
+use Tine20\DAVACL;
+use Tine20\VObject;
 
 /**
  * CardDAV plugin
@@ -38,7 +38,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -64,8 +64,8 @@ class Plugin extends DAV\ServerPlugin {
         $server->xmlNamespaces[self::NS_CARDDAV] = 'card';
 
         /* Mapping Interfaces to {DAV:}resourcetype values */
-        $server->resourceTypeMapping['Sabre\\CardDAV\\IAddressBook'] = '{' . self::NS_CARDDAV . '}addressbook';
-        $server->resourceTypeMapping['Sabre\\CardDAV\\IDirectory'] = '{' . self::NS_CARDDAV . '}directory';
+        $server->resourceTypeMapping['Tine20\\CardDAV\\IAddressBook'] = '{' . self::NS_CARDDAV . '}addressbook';
+        $server->resourceTypeMapping['Tine20\\CardDAV\\IDirectory'] = '{' . self::NS_CARDDAV . '}directory';
 
         /* Adding properties that may never be changed */
         $server->protectedProperties[] = '{' . self::NS_CARDDAV . '}supported-address-data';
@@ -73,7 +73,7 @@ class Plugin extends DAV\ServerPlugin {
         $server->protectedProperties[] = '{' . self::NS_CARDDAV . '}addressbook-home-set';
         $server->protectedProperties[] = '{' . self::NS_CARDDAV . '}supported-collation-set';
 
-        $server->propertyMap['{http://calendarserver.org/ns/}me-card'] = 'Sabre\\DAV\\Property\\Href';
+        $server->propertyMap['{http://calendarserver.org/ns/}me-card'] = 'Tine20\\DAV\\Property\\Href';
 
         $this->server = $server;
 
@@ -654,7 +654,7 @@ class Plugin extends DAV\ServerPlugin {
 
     /**
      * This method is used to generate HTML output for the
-     * Sabre\DAV\Browser\Plugin. This allows us to generate an interface users
+     * Tine20\DAV\Browser\Plugin. This allows us to generate an interface users
      * can use to create new calendars.
      *
      * @param DAV\INode $node

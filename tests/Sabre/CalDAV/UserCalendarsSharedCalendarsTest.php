@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 require_once 'Sabre/CalDAV/TestUtil.php';
 
 /**
- * @covers Sabre\CalDAV\UserCalendars
+ * @covers Tine20\CalDAV\UserCalendars
  */
 class UserCalendarsSharedCalendarsTest extends \PHPUnit_Framework_TestCase {
 

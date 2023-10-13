@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\PartialUpdate;
+namespace Tine20\DAV\PartialUpdate;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Partial update plugin (Patch method)
@@ -11,7 +11,7 @@ use Sabre\DAV;
  * It may bu used to update a file chunk, upload big a file into smaller
  * chunks or resume an upload.
  *
- * $patchPlugin = new \Sabre\DAV\PartialUpdate\Plugin();
+ * $patchPlugin = new \Tine20\DAV\PartialUpdate\Plugin();
  * $server->addPlugin($patchPlugin);
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
@@ -27,7 +27,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Reference to server
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 

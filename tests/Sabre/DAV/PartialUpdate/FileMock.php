@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\PartialUpdate;
-use Sabre\DAV;
+namespace Tine20\DAV\PartialUpdate;
+use Tine20\DAV;
 
 class FileMock implements IFile {
 

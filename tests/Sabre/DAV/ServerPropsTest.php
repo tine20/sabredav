@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/DAV/AbstractServer.php';
@@ -175,7 +175,7 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::parsePropPatchRequest
+     * @covers Tine20\DAV\Server::parsePropPatchRequest
      */
     public function testParsePropPatchRequest() {
 
@@ -197,7 +197,7 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::updateProperties
+     * @covers Tine20\DAV\Server::updateProperties
      */
     public function testUpdateProperties() {
 
@@ -215,7 +215,7 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::updateProperties
+     * @covers Tine20\DAV\Server::updateProperties
      * @depends testUpdateProperties
      */
     public function testUpdatePropertiesProtected() {
@@ -236,7 +236,7 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::updateProperties
+     * @covers Tine20\DAV\Server::updateProperties
      * @depends testUpdateProperties
      */
     public function testUpdatePropertiesFail1() {
@@ -259,7 +259,7 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::updateProperties
+     * @covers Tine20\DAV\Server::updateProperties
      * @depends testUpdateProperties
      */
     public function testUpdatePropertiesFail2() {
@@ -282,9 +282,9 @@ class ServerPropsTest extends AbstractServer {
     }
 
     /**
-     * @covers Sabre\DAV\Server::updateProperties
+     * @covers Tine20\DAV\Server::updateProperties
      * @depends testUpdateProperties
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     public function testUpdatePropertiesFail3() {
 
@@ -303,7 +303,7 @@ class ServerPropsTest extends AbstractServer {
     /**
      * @depends testParsePropPatchRequest
      * @depends testUpdateProperties
-     * @covers Sabre\DAV\Server::httpPropPatch
+     * @covers Tine20\DAV\Server::httpPropPatch
      */
     public function testPropPatch() {
 

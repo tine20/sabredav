@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\Auth;
-use Sabre\DAV;
+namespace Tine20\DAV\Auth;
+use Tine20\DAV;
 
 /**
  * This plugin provides Authentication for a WebDAV server.
@@ -21,7 +21,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Reference to main server object
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -100,7 +100,7 @@ class Plugin extends DAV\ServerPlugin {
      *
      * @param string $method
      * @param string $uri
-     * @throws Sabre\DAV\Exception\NotAuthenticated
+     * @throws Tine20\DAV\Exception\NotAuthenticated
      * @return bool
      */
     public function beforeMethod($method, $uri) {

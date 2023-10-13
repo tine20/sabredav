@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\DAV;
 
 /**
  * Calendar interface
@@ -26,7 +26,7 @@ interface ICalendar extends DAV\ICollection {
      * query.
      *
      * The list of filters are specified as an array. The exact array is
-     * documented by \Sabre\CalDAV\CalendarQueryParser.
+     * documented by \Tine20\CalDAV\CalendarQueryParser.
      *
      * @param array $filters
      * @return array

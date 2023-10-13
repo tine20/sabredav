@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
+namespace Tine20\DAVACL\Property;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 class PrincipalTest extends \PHPUnit_Framework_TestCase {
 
@@ -25,7 +25,7 @@ class PrincipalTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testSimple
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testNoHref() {
 
@@ -163,7 +163,7 @@ class PrincipalTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testUnserializeUnknown() {
 

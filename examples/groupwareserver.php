@@ -56,10 +56,10 @@ require_once 'vendor/autoload.php';
  * This allows any developer to subclass just any of them and hook into their
  * own backend systems.
  */
-$authBackend      = new \Sabre\DAV\Auth\Backend\PDO($pdo);
-$principalBackend = new \Sabre\DAVACL\PrincipalBackend\PDO($pdo);
-$carddavBackend   = new \Sabre\CardDAV\Backend\PDO($pdo);
-$caldavBackend    = new \Sabre\CalDAV\Backend\PDO($pdo);
+$authBackend      = new \Tine20\DAV\Auth\Backend\PDO($pdo);
+$principalBackend = new \Tine20\DAVACL\PrincipalBackend\PDO($pdo);
+$carddavBackend   = new \Tine20\CardDAV\Backend\PDO($pdo);
+$caldavBackend    = new \Tine20\CalDAV\Backend\PDO($pdo);
 
 /**
  * The directory tree
@@ -69,23 +69,23 @@ $caldavBackend    = new \Sabre\CalDAV\Backend\PDO($pdo);
  */
 $nodes = array(
     // /principals
-    new \Sabre\CalDAV\Principal\Collection($principalBackend),
+    new \Tine20\CalDAV\Principal\Collection($principalBackend),
     // /calendars
-    new \Sabre\CalDAV\CalendarRootNode($principalBackend, $caldavBackend),
+    new \Tine20\CalDAV\CalendarRootNode($principalBackend, $caldavBackend),
     // /addressbook
-    new \Sabre\CardDAV\AddressBookRoot($principalBackend, $carddavBackend),
+    new \Tine20\CardDAV\AddressBookRoot($principalBackend, $carddavBackend),
 );
 
 // The object tree needs in turn to be passed to the server class
-$server = new \Sabre\DAV\Server($nodes);
+$server = new \Tine20\DAV\Server($nodes);
 $server->setBaseUri($baseUri);
 
 // Plugins
-$server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend,'SabreDAV'));
-$server->addPlugin(new \Sabre\DAV\Browser\Plugin());
-$server->addPlugin(new \Sabre\CalDAV\Plugin());
-$server->addPlugin(new \Sabre\CardDAV\Plugin());
-$server->addPlugin(new \Sabre\DAVACL\Plugin());
+$server->addPlugin(new \Tine20\DAV\Auth\Plugin($authBackend,'SabreDAV'));
+$server->addPlugin(new \Tine20\DAV\Browser\Plugin());
+$server->addPlugin(new \Tine20\CalDAV\Plugin());
+$server->addPlugin(new \Tine20\CardDAV\Plugin());
+$server->addPlugin(new \Tine20\DAVACL\Plugin());
 
 // And off we go!
 $server->exec();

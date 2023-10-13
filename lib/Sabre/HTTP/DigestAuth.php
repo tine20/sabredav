@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 /**
  * HTTP Digest Authentication handler
@@ -68,8 +68,8 @@ class DigestAuth extends AbstractAuth {
      * Sets the quality of protection value.
      *
      * Possible values are:
-     *   Sabre\HTTP\DigestAuth::QOP_AUTH
-     *   Sabre\HTTP\DigestAuth::QOP_AUTHINT
+     *   Tine20\HTTP\DigestAuth::QOP_AUTH
+     *   Tine20\HTTP\DigestAuth::QOP_AUTHINT
      *
      * Multiple values can be specified using logical OR.
      *

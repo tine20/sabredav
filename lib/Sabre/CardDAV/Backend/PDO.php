@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV\Backend;
+namespace Tine20\CardDAV\Backend;
 
-use Sabre\CardDAV;
-use Sabre\DAV;
+use Tine20\CardDAV;
+use Tine20\DAV;
 
 /**
  * PDO CardDAV backend
@@ -84,12 +84,12 @@ class PDO extends AbstractBackend {
     /**
      * Updates an addressbook's properties
      *
-     * See Sabre\DAV\IProperties for a description of the mutations array, as
+     * See Tine20\DAV\IProperties for a description of the mutations array, as
      * well as the return value.
      *
      * @param mixed $addressBookId
      * @param array $mutations
-     * @see Sabre\DAV\IProperties::updateProperties
+     * @see Tine20\DAV\IProperties::updateProperties
      * @return bool|array
      */
     public function updateAddressBook($addressBookId, array $mutations) {

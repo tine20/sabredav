@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\DAV;
 
 class CalendarQueryParserTest extends \PHPUnit_Framework_TestCase {
 
@@ -22,7 +22,7 @@ class CalendarQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testNoFilter() {
 
@@ -32,7 +32,7 @@ class CalendarQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testTwoCompFilter() {
 
@@ -107,7 +107,7 @@ class CalendarQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testCompTimeRangeOnVCALENDAR() {
 
@@ -188,7 +188,7 @@ class CalendarQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testCompTimeRangeBadRange() {
 
@@ -457,7 +457,7 @@ BLA;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testExpandNoStart() {
 
@@ -484,7 +484,7 @@ BLA;
 
     }
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testExpandNoEnd() {
 
@@ -511,7 +511,7 @@ BLA;
 
     }
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testExpandBadTimes() {
 

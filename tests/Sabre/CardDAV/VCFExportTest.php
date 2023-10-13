@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
-class VCFExportTest extends \Sabre\DAVServerTest {
+class VCFExportTest extends \Tine20\DAVServerTest {
 
     protected $setupCardDAV = true;
     protected $autoLogin = 'user1';
@@ -37,7 +37,7 @@ class VCFExportTest extends \Sabre\DAVServerTest {
 
     function testSimple() {
 
-        $this->assertInstanceOf('Sabre\\CardDAV\\VCFExportPlugin', $this->server->getPlugin('Sabre\\CardDAV\\VCFExportPlugin'));
+        $this->assertInstanceOf('Tine20\\CardDAV\\VCFExportPlugin', $this->server->getPlugin('Tine20\\CardDAV\\VCFExportPlugin'));
 
     }
 

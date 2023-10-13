@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
 /**
  * Adds caldav notification support to a backend.
@@ -26,7 +26,7 @@ interface NotificationSupport extends BackendInterface {
      * Returns a list of notifications for a given principal url.
      *
      * The returned array should only consist of implementations of
-     * \Sabre\CalDAV\Notifications\INotificationType.
+     * \Tine20\CalDAV\Notifications\INotificationType.
      *
      * @param string $principalUri
      * @return array
@@ -39,9 +39,9 @@ interface NotificationSupport extends BackendInterface {
      * This may be called by a client once it deems a notification handled.
      *
      * @param string $principalUri
-     * @param \Sabre\CalDAV\Notifications\INotificationType $notification
+     * @param \Tine20\CalDAV\Notifications\INotificationType $notification
      * @return void
      */
-    public function deleteNotification($principalUri, \Sabre\CalDAV\Notifications\INotificationType $notification);
+    public function deleteNotification($principalUri, \Tine20\CalDAV\Notifications\INotificationType $notification);
 
 }

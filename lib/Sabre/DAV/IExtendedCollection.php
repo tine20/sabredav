@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * The IExtendedCollection interface.

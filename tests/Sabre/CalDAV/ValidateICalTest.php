@@ -1,21 +1,21 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\DAVACL;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 class ValidateICalTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
     /**
-     * @var Sabre\CalDAV\Backend\Mock
+     * @var Tine20\CalDAV\Backend\Mock
      */
     protected $calBackend;
 

@@ -39,7 +39,7 @@ foreach($paths as $path) {
     }
 }
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 // Root 
 $root = new DAV\FS\Directory(getcwd());

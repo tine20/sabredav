@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications\Notification;
+namespace Tine20\CalDAV\Notifications\Notification;
 
-use Sabre\DAV;
-use Sabre\CalDAV;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 /**
  * SystemStatus notification

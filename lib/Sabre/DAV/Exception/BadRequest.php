@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
 /**
  * BadRequest
@@ -12,7 +12,7 @@ namespace Sabre\DAV\Exception;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class BadRequest extends \Sabre\DAV\Exception {
+class BadRequest extends \Tine20\DAV\Exception {
 
     /**
      * Returns the HTTP statuscode for this exception

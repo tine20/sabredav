@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
 /**
  * InsufficientStorage
@@ -11,7 +11,7 @@ namespace Sabre\DAV\Exception;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class InsufficientStorage extends \Sabre\DAV\Exception {
+class InsufficientStorage extends \Tine20\DAV\Exception {
 
     /**
      * Returns the HTTP statuscode for this exception

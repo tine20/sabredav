@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\FSExt;
+namespace Tine20\DAV\FSExt;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/DAV/AbstractServer.php';
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
-use Sabre\VObject;
-use Sabre\CalDAV;
-use Sabre\DAV;
+use Tine20\VObject;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 /**
  * PDO CalDAV backend
@@ -175,7 +175,7 @@ class PDO extends AbstractBackend {
             $values[':components'] = 'VEVENT,VTODO';
         } else {
             if (!($properties[$sccs] instanceof CalDAV\Property\SupportedCalendarComponentSet)) {
-                throw new DAV\Exception('The ' . $sccs . ' property must be of type: \Sabre\CalDAV\Property\SupportedCalendarComponentSet');
+                throw new DAV\Exception('The ' . $sccs . ' property must be of type: \Tine20\CalDAV\Property\SupportedCalendarComponentSet');
             }
             $values[':components'] = implode(',',$properties[$sccs]->getValue());
         }
@@ -497,7 +497,7 @@ class PDO extends AbstractBackend {
             }
         }
         if (!$componentType) {
-            throw new \Sabre\DAV\Exception\BadRequest('Calendar objects must have a VJOURNAL, VEVENT or VTODO component');
+            throw new \Tine20\DAV\Exception\BadRequest('Calendar objects must have a VJOURNAL, VEVENT or VTODO component');
         }
         if ($componentType === 'VEVENT') {
             $firstOccurence = $component->DTSTART->getDateTime()->getTimeStamp();
@@ -572,7 +572,7 @@ class PDO extends AbstractBackend {
      * query.
      *
      * The list of filters are specified as an array. The exact array is
-     * documented by \Sabre\CalDAV\CalendarQueryParser.
+     * documented by \Tine20\CalDAV\CalendarQueryParser.
      *
      * Note that it is extremely likely that getCalendarObject for every path
      * returned from this method will be called almost immediately after. You
@@ -601,7 +601,7 @@ class PDO extends AbstractBackend {
      * time-range filter specified on a VEVENT must for instance also handle
      * recurrence rules correctly.
      * A good example of how to interprete all these filters can also simply
-     * be found in \Sabre\CalDAV\CalendarQueryFilter. This class is as correct
+     * be found in \Tine20\CalDAV\CalendarQueryFilter. This class is as correct
      * as possible, so it gives you a good idea on what type of stuff you need
      * to think of.
      *
@@ -615,7 +615,7 @@ class PDO extends AbstractBackend {
     public function calendarQuery($calendarId, array $filters) {
 
         $result = array();
-        $validator = new \Sabre\CalDAV\CalendarQueryValidator();
+        $validator = new \Tine20\CalDAV\CalendarQueryValidator();
 
         $componentType = null;
         $requirePostFilter = true;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\VObject;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\VObject;
+use Tine20\DAV;
 
 class Issue166Test extends \PHPUnit_Framework_TestCase {
 

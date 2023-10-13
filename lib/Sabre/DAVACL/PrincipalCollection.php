@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
 /**
  * Principals Collection
  *
  * This collection represents a list of users.
- * The users are instances of Sabre\DAVACL\Principal
+ * The users are instances of Tine20\DAVACL\Principal
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)
@@ -22,7 +22,7 @@ class PrincipalCollection extends AbstractPrincipalCollection {
      * supplied by the authentication backend.
      *
      * @param array $principal
-     * @return \Sabre\DAV\INode
+     * @return \Tine20\DAV\INode
      */
     public function getChildForPrincipal(array $principal) {
 

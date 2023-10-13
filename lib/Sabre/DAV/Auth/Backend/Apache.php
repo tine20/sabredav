@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
-use Sabre\DAV;
+namespace Tine20\DAV\Auth\Backend;
+use Tine20\DAV;
 
 /**
  * Apache authenticator

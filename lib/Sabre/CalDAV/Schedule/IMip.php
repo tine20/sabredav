@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Schedule;
+namespace Tine20\CalDAV\Schedule;
 
-use Sabre\VObject;
-use Sabre\DAV;
+use Tine20\VObject;
+use Tine20\DAV;
 
 /**
  * iMIP handler.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 require_once 'Sabre/TestUtil.php';
 
@@ -10,7 +10,7 @@ class ObjectTreeTest extends \PHPUnit_Framework_TestCase {
 
     function setup() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
         mkdir(SABRE_TEMPDIR . '/root');
         mkdir(SABRE_TEMPDIR . '/root/subdir');
         file_put_contents(SABRE_TEMPDIR . '/root/file.txt','contents');
@@ -22,21 +22,21 @@ class ObjectTreeTest extends \PHPUnit_Framework_TestCase {
 
     function teardown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 
     function testGetRootNode() {
 
         $root = $this->tree->getNodeForPath('');
-        $this->assertInstanceOf('Sabre\\DAV\\FSExt\\Directory',$root);
+        $this->assertInstanceOf('Tine20\\DAV\\FSExt\\Directory',$root);
 
     }
 
     function testGetSubDir() {
 
         $root = $this->tree->getNodeForPath('subdir');
-        $this->assertInstanceOf('Sabre\\DAV\\FSExt\\Directory',$root);
+        $this->assertInstanceOf('Tine20\\DAV\\FSExt\\Directory',$root);
 
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 class ShareableCalendarTest extends \PHPUnit_Framework_TestCase {
 

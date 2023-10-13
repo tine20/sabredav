@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\HTTP;
-use Sabre\VObject;
+use Tine20\HTTP;
+use Tine20\VObject;
 
 /**
  * This unittests is created to find out why certain events show up twice.
@@ -15,7 +15,7 @@ use Sabre\VObject;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class ExpandEventsDoubleEventsTest extends \Sabre\DAVServerTest {
+class ExpandEventsDoubleEventsTest extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 

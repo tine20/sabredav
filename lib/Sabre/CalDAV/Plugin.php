@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
-use Sabre\VObject;
+use Tine20\DAV;
+use Tine20\DAVACL;
+use Tine20\VObject;
 
 /**
  * CalDAV plugin
@@ -171,14 +171,14 @@ class Plugin extends DAV\ServerPlugin {
         $server->xmlNamespaces[self::NS_CALDAV] = 'cal';
         $server->xmlNamespaces[self::NS_CALENDARSERVER] = 'cs';
 
-        $server->propertyMap['{' . self::NS_CALDAV . '}supported-calendar-component-set'] = 'Sabre\\CalDAV\\Property\\SupportedCalendarComponentSet';
-        $server->propertyMap['{' . self::NS_CALDAV . '}schedule-calendar-transp'] = 'Sabre\\CalDAV\\Property\\ScheduleCalendarTransp';
+        $server->propertyMap['{' . self::NS_CALDAV . '}supported-calendar-component-set'] = 'Tine20\\CalDAV\\Property\\SupportedCalendarComponentSet';
+        $server->propertyMap['{' . self::NS_CALDAV . '}schedule-calendar-transp'] = 'Tine20\\CalDAV\\Property\\ScheduleCalendarTransp';
 
-        $server->resourceTypeMapping['\\Sabre\\CalDAV\\ICalendar'] = '{urn:ietf:params:xml:ns:caldav}calendar';
-        $server->resourceTypeMapping['\\Sabre\\CalDAV\\Schedule\\IOutbox'] = '{urn:ietf:params:xml:ns:caldav}schedule-outbox';
-        $server->resourceTypeMapping['\\Sabre\\CalDAV\\Principal\\IProxyRead'] = '{http://calendarserver.org/ns/}calendar-proxy-read';
-        $server->resourceTypeMapping['\\Sabre\\CalDAV\\Principal\\IProxyWrite'] = '{http://calendarserver.org/ns/}calendar-proxy-write';
-        $server->resourceTypeMapping['\\Sabre\\CalDAV\\Notifications\\ICollection'] = '{' . self::NS_CALENDARSERVER . '}notification';
+        $server->resourceTypeMapping['\\Tine20\\CalDAV\\ICalendar'] = '{urn:ietf:params:xml:ns:caldav}calendar';
+        $server->resourceTypeMapping['\\Tine20\\CalDAV\\Schedule\\IOutbox'] = '{urn:ietf:params:xml:ns:caldav}schedule-outbox';
+        $server->resourceTypeMapping['\\Tine20\\CalDAV\\Principal\\IProxyRead'] = '{http://calendarserver.org/ns/}calendar-proxy-read';
+        $server->resourceTypeMapping['\\Tine20\\CalDAV\\Principal\\IProxyWrite'] = '{http://calendarserver.org/ns/}calendar-proxy-write';
+        $server->resourceTypeMapping['\\Tine20\\CalDAV\\Notifications\\ICollection'] = '{' . self::NS_CALENDARSERVER . '}notification';
 
         array_push($server->protectedProperties,
 
@@ -286,7 +286,7 @@ class Plugin extends DAV\ServerPlugin {
         // for clients matching iCal in the user agent
         //$ua = $this->server->httpRequest->getHeader('User-Agent');
         //if (strpos($ua,'iCal/')!==false) {
-        //    throw new \Sabre\DAV\Exception\Forbidden('iCal has major bugs in it\'s RFC3744 support. Therefore we are left with no other choice but disabling this feature.');
+        //    throw new \Tine20\DAV\Exception\Forbidden('iCal has major bugs in it\'s RFC3744 support. Therefore we are left with no other choice but disabling this feature.');
         //}
 
         $body = $this->server->httpRequest->getBody(true);

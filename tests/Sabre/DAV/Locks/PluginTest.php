@@ -1,16 +1,16 @@
 <?php
 
-namespace Sabre\DAV\Locks;
+namespace Tine20\DAV\Locks;
 
-use Sabre\HTTP;
-use Sabre\DAV;
+use Tine20\HTTP;
+use Tine20\DAV;
 
 require_once 'Sabre/DAV/AbstractServer.php';
 
 class PluginTest extends DAV\AbstractServer {
 
     /**
-     * @var Sabre\DAV\Locks\Plugin
+     * @var Tine20\DAV\Locks\Plugin
      */
     protected $locksPlugin;
 
@@ -965,7 +965,7 @@ class PluginTest extends DAV\AbstractServer {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testGetTimeoutHeaderInvalid() {
 

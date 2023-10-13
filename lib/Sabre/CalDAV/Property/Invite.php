@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
-use Sabre\CalDAV\SharingPlugin as SharingPlugin;
-use Sabre\DAV;
-use Sabre\CalDAV;
+use Tine20\CalDAV\SharingPlugin as SharingPlugin;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 /**
  * Invite property

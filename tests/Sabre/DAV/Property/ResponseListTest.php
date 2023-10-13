@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
 class ResponseListTest extends \PHPUnit_Framework_TestCase {
 

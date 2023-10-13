@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV; 
+namespace Tine20\DAV; 
 
 class XMLUtilTest extends \PHPUnit_Framework_TestCase {
 
@@ -114,7 +114,7 @@ class XMLUtilTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testLoadDOMDocument
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testLoadDOMDocumentEmpty() {
 
@@ -123,7 +123,7 @@ class XMLUtilTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      * @depends testConvertDAVNamespace
      */
     function testLoadDOMDocumentInvalid() {
@@ -249,7 +249,7 @@ class XMLUtilTest extends \PHPUnit_Framework_TestCase {
 </root>';
 
         $dom = XMLUtil::loadDOMDocument($xml);
-        $properties = XMLUtil::parseProperties($dom->firstChild,array('{DAV:}someprop'=>'Sabre\\DAV\\Property\\Href'));
+        $properties = XMLUtil::parseProperties($dom->firstChild,array('{DAV:}someprop'=>'Tine20\\DAV\\Property\\Href'));
 
         $this->assertEquals(array(
             '{DAV:}displayname' => 'Calendars',

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 /**
- * This class contains the Sabre\HTTP version constants.
+ * This class contains the Tine20\HTTP version constants.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)

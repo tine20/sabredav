@@ -13,7 +13,7 @@ require_once 'vendor/autoload.php';
 $u = 'admin';
 $p = '1234';
 
-$auth = new \Sabre\HTTP\DigestAuth();
+$auth = new \Tine20\HTTP\DigestAuth();
 $auth->init();
 
 if ($auth->getUsername() != $u || !$auth->validatePassword($p)) {

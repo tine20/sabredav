@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
-use Sabre\DAV;
+namespace Tine20\CalDAV\Notifications;
+use Tine20\DAV;
 
 /**
  * This interface reflects a single notification type.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 /**
  * The UserCalenders class contains all calendars associated to one user
@@ -17,7 +17,7 @@ class UserCalendars implements DAV\IExtendedCollection, DAVACL\IACL {
     /**
      * CalDAV backend
      *
-     * @var Sabre\CalDAV\Backend\BackendInterface
+     * @var Tine20\CalDAV\Backend\BackendInterface
      */
     protected $caldavBackend;
 
@@ -302,7 +302,7 @@ class UserCalendars implements DAV\IExtendedCollection, DAVACL\IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

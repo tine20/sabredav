@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL\Exception;
+namespace Tine20\DAVACL\Exception;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This exception is thrown when a client attempts to set conflicting

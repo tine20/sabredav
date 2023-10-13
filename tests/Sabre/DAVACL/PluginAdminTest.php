@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 require_once 'Sabre/DAVACL/MockACLNode.php';

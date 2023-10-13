@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
 class SupportedCalendarComponentSetTest extends \PHPUnit_Framework_TestCase {
 
@@ -21,10 +21,10 @@ class SupportedCalendarComponentSetTest extends \PHPUnit_Framework_TestCase {
         $doc = new \DOMDocument();
         $root = $doc->createElement('d:root');
         $root->setAttribute('xmlns:d','DAV:');
-        $root->setAttribute('xmlns:cal',\Sabre\CalDAV\Plugin::NS_CALDAV);
+        $root->setAttribute('xmlns:cal',\Tine20\CalDAV\Plugin::NS_CALDAV);
 
         $doc->appendChild($root);
-        $server = new \Sabre\DAV\Server();
+        $server = new \Tine20\DAV\Server();
 
         $property->serialize($server, $root);
 
@@ -32,7 +32,7 @@ class SupportedCalendarComponentSetTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(
 '<?xml version="1.0"?>
-<d:root xmlns:d="DAV:" xmlns:cal="' . \Sabre\CalDAV\Plugin::NS_CALDAV . '">' .
+<d:root xmlns:d="DAV:" xmlns:cal="' . \Tine20\CalDAV\Plugin::NS_CALDAV . '">' .
 '<cal:comp name="VEVENT"/>' .
 '<cal:comp name="VJOURNAL"/>' .
 '</d:root>
@@ -46,12 +46,12 @@ class SupportedCalendarComponentSetTest extends \PHPUnit_Framework_TestCase {
     function testUnserializer() {
 
         $xml = '<?xml version="1.0"?>
-<d:root xmlns:d="DAV:" xmlns:cal="' . \Sabre\CalDAV\Plugin::NS_CALDAV . '">' .
+<d:root xmlns:d="DAV:" xmlns:cal="' . \Tine20\CalDAV\Plugin::NS_CALDAV . '">' .
 '<cal:comp name="VEVENT"/>' .
 '<cal:comp name="VJOURNAL"/>' .
 '</d:root>';
 
-        $dom = \Sabre\DAV\XMLUtil::loadDOMDocument($xml);
+        $dom = \Tine20\DAV\XMLUtil::loadDOMDocument($xml);
 
         $property = SupportedCalendarComponentSet::unserialize($dom->firstChild);
 

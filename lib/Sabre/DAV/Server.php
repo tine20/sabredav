@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\DAV;
+use Tine20\HTTP;
 
 /**
  * Main DAV server class
@@ -35,7 +35,7 @@ class Server {
     /**
      * The tree object
      *
-     * @var Sabre\DAV\Tree
+     * @var Tine20\DAV\Tree
      */
     public $tree;
 
@@ -49,14 +49,14 @@ class Server {
     /**
      * httpResponse
      *
-     * @var Sabre\HTTP\Response
+     * @var Tine20\HTTP\Response
      */
     public $httpResponse;
 
     /**
      * httpRequest
      *
-     * @var Sabre\HTTP\Request
+     * @var Tine20\HTTP\Request
      */
     public $httpRequest;
 
@@ -94,7 +94,7 @@ class Server {
      * @var array
      */
     public $propertyMap = array(
-        '{DAV:}resourcetype' => 'Sabre\\DAV\\Property\\ResourceType',
+        '{DAV:}resourcetype' => 'Tine20\\DAV\\Property\\ResourceType',
     );
 
     public $protectedProperties = array(
@@ -131,12 +131,12 @@ class Server {
      * based on a node's classname or interface.
      *
      * The preset ensures that {DAV:}collection is automaticlly added for nodes
-     * implementing Sabre\DAV\ICollection.
+     * implementing Tine20\DAV\ICollection.
      *
      * @var array
      */
     public $resourceTypeMapping = array(
-        'Sabre\\DAV\\ICollection' => '{DAV:}collection',
+        'Tine20\\DAV\\ICollection' => '{DAV:}collection',
     );
 
     /**
@@ -152,12 +152,12 @@ class Server {
     /**
      * Sets up the server
      *
-     * If a Sabre\DAV\Tree object is passed as an argument, it will
-     * use it as the directory tree. If a Sabre\DAV\INode is passed, it
-     * will create a Sabre\DAV\ObjectTree and use the node as the root.
+     * If a Tine20\DAV\Tree object is passed as an argument, it will
+     * use it as the directory tree. If a Tine20\DAV\INode is passed, it
+     * will create a Tine20\DAV\ObjectTree and use the node as the root.
      *
-     * If nothing is passed, a Sabre\DAV\SimpleCollection is created in
-     * a Sabre\DAV\ObjectTree.
+     * If nothing is passed, a Tine20\DAV\SimpleCollection is created in
+     * a Tine20\DAV\ObjectTree.
      *
      * If an array is passed, we automatically create a root node, and use
      * the nodes in the array as top-level children.
@@ -176,7 +176,7 @@ class Server {
             // create the root node.
             foreach($treeOrNode as $node) {
                 if (!($node instanceof INode)) {
-                    throw new Exception('Invalid argument passed to constructor. If you\'re passing an array, all the values must implement Sabre\\DAV\\INode');
+                    throw new Exception('Invalid argument passed to constructor. If you\'re passing an array, all the values must implement Tine20\\DAV\\INode');
                 }
             }
 
@@ -187,7 +187,7 @@ class Server {
             $root = new SimpleCollection('root');
             $this->tree = new ObjectTree($root);
         } else {
-            throw new Exception('Invalid argument passed to constructor. Argument must either be an instance of Sabre\\DAV\\Tree, Sabre\\DAV\\INode, an array or null');
+            throw new Exception('Invalid argument passed to constructor. Argument must either be an instance of Tine20\\DAV\\Tree, Tine20\\DAV\\INode, an array or null');
         }
         $this->httpResponse = new HTTP\Response();
         $this->httpRequest = new HTTP\Request();
@@ -340,7 +340,7 @@ class Server {
     /**
      * Adds a plugin to the server
      *
-     * For more information, console the documentation of Sabre\DAV\ServerPlugin
+     * For more information, console the documentation of Tine20\DAV\ServerPlugin
      *
      * @param ServerPlugin $plugin
      * @return void
@@ -1160,7 +1160,7 @@ class Server {
     /**
      * Returns the HTTP depth header
      *
-     * This method returns the contents of the HTTP depth request header. If the depth header was 'infinity' it will return the Sabre\DAV\Server::DEPTH_INFINITY object
+     * This method returns the contents of the HTTP depth request header. If the depth header was 'infinity' it will return the Tine20\DAV\Server::DEPTH_INFINITY object
      * It is possible to supply a default depth value, which is used when the depth header has invalid content, or is completely non-existent
      *
      * @param mixed $default
@@ -1823,7 +1823,7 @@ class Server {
             ));
         }
 
-        // If the node is not an instance of Sabre\DAV\IProperties, every
+        // If the node is not an instance of Tine20\DAV\IProperties, every
         // property is 403 Forbidden
         if (!$hasError && count($remainingProperties) && !($node instanceof IProperties)) {
             $hasError = true;

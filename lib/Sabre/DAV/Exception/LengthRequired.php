@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * LengthRequired

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
-use Sabre\VObject;
+use Tine20\DAV;
+use Tine20\VObject;
 
 /**
  * VCF Exporter
@@ -22,7 +22,7 @@ class VCFExportPlugin extends DAV\ServerPlugin {
     /**
      * Reference to Server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 

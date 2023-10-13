@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
-use Sabre\DAV;
-use Sabre\CalDAV;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 /**
  * schedule-calendar-transp property.

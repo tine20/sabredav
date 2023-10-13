@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Schedule;
-use Sabre\DAV;
-use Sabre\CalDAV;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV\Schedule;
+use Tine20\DAV;
+use Tine20\CalDAV;
+use Tine20\DAVACL;
 
 /**
  * The CalDAV scheduling outbox
@@ -52,7 +52,7 @@ class Outbox extends DAV\Collection implements IOutbox {
     /**
      * Returns an array with all the child nodes
      *
-     * @return \Sabre\DAV\INode[]
+     * @return \Tine20\DAV\INode[]
      */
     public function getChildren() {
 
@@ -138,7 +138,7 @@ class Outbox extends DAV\Collection implements IOutbox {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

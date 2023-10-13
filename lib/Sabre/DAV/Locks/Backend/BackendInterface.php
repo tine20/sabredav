@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Locks\Backend;
+namespace Tine20\DAV\Locks\Backend;
 
-use Sabre\DAV\Locks;
+use Tine20\DAV\Locks;
 
 /**
  * If you are defining your own Locks backend, you must implement this
@@ -15,7 +15,7 @@ use Sabre\DAV\Locks;
 interface BackendInterface {
 
     /**
-     * Returns a list of Sabre\DAV\Locks\LockInfo objects
+     * Returns a list of Tine20\DAV\Locks\LockInfo objects
      *
      * This method should return all the locks for a particular uri, including
      * locks that might be set on a parent uri.

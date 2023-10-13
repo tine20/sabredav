@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 class PrincipalTest extends \PHPUnit_Framework_TestCase {
 
@@ -16,7 +16,7 @@ class PrincipalTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     public function testConstructNoUri() {
 
@@ -183,7 +183,7 @@ class PrincipalTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     public function testSetACl() {
 

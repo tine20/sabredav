@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
 /**
  * This class contains the SabreDAV version constants.

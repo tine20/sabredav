@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
 /**
  * IHref interface

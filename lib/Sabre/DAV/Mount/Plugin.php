@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Mount;
+namespace Tine20\DAV\Mount;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This plugin provides support for RFC4709: Mounting WebDAV servers
@@ -18,7 +18,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Reference to Server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 

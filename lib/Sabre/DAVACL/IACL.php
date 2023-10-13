@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAVACL;
-use Sabre\DAV;
+namespace Tine20\DAVACL;
+use Tine20\DAV;
 
 /**
  * ACL-enabled node
@@ -60,7 +60,7 @@ interface IACL extends DAV\INode {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 /**
  * This object represents a CalDAV calendar that is shared by a different user.
@@ -101,7 +101,7 @@ class SharedCalendar extends Calendar implements ISharedCalendar {
      * Every element in this array should have the following properties:
      *   * href - Often a mailto: address
      *   * commonName - Optional, for example a first + last name
-     *   * status - See the Sabre\CalDAV\SharingPlugin::STATUS_ constants.
+     *   * status - See the Tine20\CalDAV\SharingPlugin::STATUS_ constants.
      *   * readOnly - boolean
      *   * summary - Optional, a description for the share
      *

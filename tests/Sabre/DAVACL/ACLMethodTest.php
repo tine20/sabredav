@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 class ACLMethodTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testCallback() {
 
@@ -33,7 +33,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     /**
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testNotSupportedByNode() {
 
@@ -72,7 +72,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NotRecognizedPrincipal
+     * @expectedException Tine20\DAVACL\Exception\NotRecognizedPrincipal
      */
     function testUnrecognizedPrincipal() {
 
@@ -97,7 +97,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NotRecognizedPrincipal
+     * @expectedException Tine20\DAVACL\Exception\NotRecognizedPrincipal
      */
     function testUnrecognizedPrincipal2() {
 
@@ -125,7 +125,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NotSupportedPrivilege
+     * @expectedException Tine20\DAVACL\Exception\NotSupportedPrivilege
      */
     function testUnknownPrivilege() {
 
@@ -150,7 +150,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NoAbstract
+     * @expectedException Tine20\DAVACL\Exception\NoAbstract
      */
     function testAbstractPrivilege() {
 
@@ -175,7 +175,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\AceConflict
+     * @expectedException Tine20\DAVACL\Exception\AceConflict
      */
     function testUpdateProtectedPrivilege() {
 
@@ -208,7 +208,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\AceConflict
+     * @expectedException Tine20\DAVACL\Exception\AceConflict
      */
     function testUpdateProtectedPrivilege2() {
 
@@ -241,7 +241,7 @@ class ACLMethodTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\AceConflict
+     * @expectedException Tine20\DAVACL\Exception\AceConflict
      */
     function testUpdateProtectedPrivilege3() {
 

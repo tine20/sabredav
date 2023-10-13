@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
+namespace Tine20\CalDAV\Notifications;
 
-use Sabre\DAV;
-use Sabre\CalDAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\CalDAV;
+use Tine20\DAVACL;
 
 /**
  * This node represents a list of notifications.
@@ -13,7 +13,7 @@ use Sabre\DAVACL;
  * interface to allow the Notifications plugin to mark the collection
  * as a notifications collection.
  *
- * This collection should only return Sabre\CalDAV\Notifications\INode nodes as
+ * This collection should only return Tine20\CalDAV\Notifications\INode nodes as
  * its children.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
@@ -25,7 +25,7 @@ class Collection extends DAV\Collection implements ICollection, DAVACL\IACL {
     /**
      * The notification backend
      *
-     * @var Sabre\CalDAV\Backend\NotificationSupport
+     * @var Tine20\CalDAV\Backend\NotificationSupport
      */
     protected $caldavBackend;
 
@@ -156,7 +156,7 @@ class Collection extends DAV\Collection implements ICollection, DAVACL\IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

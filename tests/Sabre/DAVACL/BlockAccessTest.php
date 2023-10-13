@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 class BlockAccessTest extends \PHPUnit_Framework_TestCase {
 
@@ -27,7 +27,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testGet() {
 
@@ -43,7 +43,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testHEAD() {
 
@@ -52,7 +52,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testOPTIONS() {
 
@@ -61,7 +61,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testPUT() {
 
@@ -70,7 +70,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testPROPPATCH() {
 
@@ -79,7 +79,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testCOPY() {
 
@@ -88,7 +88,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testMOVE() {
 
@@ -97,7 +97,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testACL() {
 
@@ -106,7 +106,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testLOCK() {
 
@@ -115,7 +115,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testBeforeBind() {
 
@@ -124,7 +124,7 @@ class BlockAccessTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testBeforeUnbind() {
 

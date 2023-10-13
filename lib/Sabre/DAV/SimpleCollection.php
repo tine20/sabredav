@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * SimpleCollection
@@ -42,7 +42,7 @@ class SimpleCollection extends Collection {
         $this->name = $name;
         foreach($children as $child) {
 
-            if (!($child instanceof INode)) throw new Exception('Only instances of Sabre\DAV\INode are allowed to be passed in the children argument');
+            if (!($child instanceof INode)) throw new Exception('Only instances of Tine20\DAV\INode are allowed to be passed in the children argument');
             $this->addChild($child);
 
         }
@@ -78,7 +78,7 @@ class SimpleCollection extends Collection {
      * This method makes use of the getChildren method to grab all the child nodes, and compares the name.
      * Generally its wise to override this, as this can usually be optimized
      *
-     * This method must throw Sabre\DAV\Exception\NotFound if the node does not
+     * This method must throw Tine20\DAV\Exception\NotFound if the node does not
      * exist.
      *
      * @param string $name

@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\Property;
-use Sabre\DAV;
+namespace Tine20\DAV\Property;
+use Tine20\DAV;
 
 class HrefListTest extends \PHPUnit_Framework_TestCase {
 

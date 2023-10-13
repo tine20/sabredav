@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Locks;
+namespace Tine20\DAV\Locks;
 
 /**
  * LockInfo class
@@ -65,7 +65,7 @@ class LockInfo {
     public $scope = self::EXCLUSIVE;
 
     /**
-     * Depth of lock, can be 0 or Sabre\DAV\Server::DEPTH_INFINITY
+     * Depth of lock, can be 0 or Tine20\DAV\Server::DEPTH_INFINITY
      */
     public $depth = 0;
 

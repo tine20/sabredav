@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 /**
  * IDirectory interface

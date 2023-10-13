@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
 /**
- * This class contains the Sabre\CalDAV version constants.
+ * This class contains the Tine20\CalDAV version constants.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)

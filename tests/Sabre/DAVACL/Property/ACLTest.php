@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
+namespace Tine20\DAVACL\Property;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 class ACLTest extends \PHPUnit_Framework_TestCase {
@@ -189,7 +189,7 @@ class ACLTest extends \PHPUnit_Framework_TestCase {
         $dom = DAV\XMLUtil::loadDOMDocument($source);
         $result = Acl::unserialize($dom->firstChild);
 
-        $this->assertInstanceOf('Sabre\\DAVACL\\Property\\ACL', $result);
+        $this->assertInstanceOf('Tine20\\DAVACL\\Property\\ACL', $result);
 
         $expected = array(
             array(
@@ -210,7 +210,7 @@ class ACLTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testUnserializeNoPrincipal() {
 
@@ -265,7 +265,7 @@ class ACLTest extends \PHPUnit_Framework_TestCase {
         $dom = DAV\XMLUtil::loadDOMDocument($source);
         $result = Acl::unserialize($dom->firstChild);
 
-        $this->assertInstanceOf('Sabre\\DAVACL\\Property\\Acl', $result);
+        $this->assertInstanceOf('Tine20\\DAVACL\\Property\\Acl', $result);
 
         $expected = array(
             array(
@@ -291,7 +291,7 @@ class ACLTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotImplemented
+     * @expectedException Tine20\DAV\Exception\NotImplemented
      */
     function testUnserializeDeny() {
 
@@ -313,7 +313,7 @@ class ACLTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testUnserializeMissingPriv() {
 

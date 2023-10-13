@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
 require_once 'Sabre/DAV/Auth/Backend/AbstractPDOTest.php';
 

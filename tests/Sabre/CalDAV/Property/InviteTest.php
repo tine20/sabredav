@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
-use Sabre\CalDAV;
-use Sabre\DAV;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 class InviteTest extends \PHPUnit_Framework_TestCase {
 
@@ -173,7 +173,7 @@ class InviteTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testUnserializeNoStatus() {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
 class FileTest extends \PHPUnit_Framework_TestCase {
 
@@ -18,7 +18,7 @@ class FileTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testLoadFileBroken() {
 

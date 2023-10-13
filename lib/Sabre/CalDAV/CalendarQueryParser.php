@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 /**
  * Parses the calendar-query report request body.
@@ -84,16 +84,16 @@ class CalendarQueryParser {
 
         $filter = $this->xpath->query('/cal:calendar-query/cal:filter');
         if ($filter->length !== 1) {
-            throw new \Sabre\DAV\Exception\BadRequest('Only one filter element is allowed');
+            throw new \Tine20\DAV\Exception\BadRequest('Only one filter element is allowed');
         }
 
         $compFilters = $this->parseCompFilters($filter->item(0));
         if (count($compFilters)!==1) {
-            throw new \Sabre\DAV\Exception\BadRequest('There must be exactly 1 top-level comp-filter.');
+            throw new \Tine20\DAV\Exception\BadRequest('There must be exactly 1 top-level comp-filter.');
         }
 
         $this->filters = $compFilters[0];
-        $this->requestedProperties = array_keys(\Sabre\DAV\XMLUtil::parseProperties($this->dom->firstChild));
+        $this->requestedProperties = array_keys(\Tine20\DAV\XMLUtil::parseProperties($this->dom->firstChild));
 
         $expand = $this->xpath->query('/cal:calendar-query/dav:prop/cal:calendar-data/cal:expand');
         if ($expand->length>0) {
@@ -132,7 +132,7 @@ class CalendarQueryParser {
                 'VFREEBUSY',
                 'VALARM',
             ))) {
-                throw new \Sabre\DAV\Exception\BadRequest('The time-range filter is not defined for the ' . $compFilter['name'] . ' component');
+                throw new \Tine20\DAV\Exception\BadRequest('The time-range filter is not defined for the ' . $compFilter['name'] . ' component');
             };
 
             $result[] = $compFilter;
@@ -253,7 +253,7 @@ class CalendarQueryParser {
         }
 
         if (!is_null($start) && !is_null($end) && $end <= $start) {
-            throw new \Sabre\DAV\Exception\BadRequest('The end-date must be larger than the start-date in the time-range filter');
+            throw new \Tine20\DAV\Exception\BadRequest('The end-date must be larger than the start-date in the time-range filter');
         }
 
         return array(
@@ -273,19 +273,19 @@ class CalendarQueryParser {
 
         $start = $parentNode->getAttribute('start');
         if(!$start) {
-            throw new \Sabre\DAV\Exception\BadRequest('The "start" attribute is required for the CALDAV:expand element');
+            throw new \Tine20\DAV\Exception\BadRequest('The "start" attribute is required for the CALDAV:expand element');
         }
         $start = VObject\DateTimeParser::parseDateTime($start);
 
         $end = $parentNode->getAttribute('end');
         if(!$end) {
-            throw new \Sabre\DAV\Exception\BadRequest('The "end" attribute is required for the CALDAV:expand element');
+            throw new \Tine20\DAV\Exception\BadRequest('The "end" attribute is required for the CALDAV:expand element');
         }
 
         $end = VObject\DateTimeParser::parseDateTime($end);
 
         if ($end <= $start) {
-            throw new \Sabre\DAV\Exception\BadRequest('The end-date must be larger than the start-date in the expand element.');
+            throw new \Tine20\DAV\Exception\BadRequest('The end-date must be larger than the start-date in the expand element.');
         }
 
         return array(

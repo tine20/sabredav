@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 class StringUtilTest extends \PHPUnit_Framework_TestCase {
 
@@ -65,7 +65,7 @@ class StringUtilTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     public function testBadCollation() {
 
@@ -75,7 +75,7 @@ class StringUtilTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     public function testBadMatchType() {
 

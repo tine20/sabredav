@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\DAVServerTest;
-use Sabre\HTTP;
+use Tine20\DAVServerTest;
+use Tine20\HTTP;
 
 /**
  * Tests related to the PUT request.
@@ -11,9 +11,9 @@ use Sabre\HTTP;
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
- * @covers Sabre\DAV\Server::httpPut
- * @covers Sabre\DAV\Server::createFile
- * @covers Sabre\DAV\Server::checkPreconditions
+ * @covers Tine20\DAV\Server::httpPut
+ * @covers Tine20\DAV\Server::createFile
+ * @covers Tine20\DAV\Server::checkPreconditions
  */
 class HttpPutTest extends DAVServerTest {
 

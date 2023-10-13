@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This plugin implements support for caldav sharing.
@@ -11,7 +11,7 @@ use Sabre\DAV;
  * http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-sharing.txt
  *
  * See:
- * Sabre\CalDAV\Backend\SharingSupport for all the documentation.
+ * Tine20\CalDAV\Backend\SharingSupport for all the documentation.
  *
  * Note: This feature is experimental, and may change in between different
  * SabreDAV versions.
@@ -34,7 +34,7 @@ class SharingPlugin extends DAV\ServerPlugin {
     /**
      * Reference to SabreDAV server object.
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -56,7 +56,7 @@ class SharingPlugin extends DAV\ServerPlugin {
      * Returns a plugin name.
      *
      * Using this name other plugins will be able to access other plugins
-     * using Sabre\DAV\Server::getPlugin
+     * using Tine20\DAV\Server::getPlugin
      *
      * @return string
      */
@@ -69,7 +69,7 @@ class SharingPlugin extends DAV\ServerPlugin {
     /**
      * This initializes the plugin.
      *
-     * This function is called by Sabre\DAV\Server, after
+     * This function is called by Tine20\DAV\Server, after
      * addPlugin is called.
      *
      * This method should set up the required event subscriptions.
@@ -80,7 +80,7 @@ class SharingPlugin extends DAV\ServerPlugin {
     public function initialize(DAV\Server $server) {
 
         $this->server = $server;
-        $server->resourceTypeMapping['Sabre\\CalDAV\\ISharedCalendar'] = '{' . Plugin::NS_CALENDARSERVER . '}shared';
+        $server->resourceTypeMapping['Tine20\\CalDAV\\ISharedCalendar'] = '{' . Plugin::NS_CALENDARSERVER . '}shared';
 
         array_push(
             $this->server->protectedProperties,

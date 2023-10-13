@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * The ICollection Interface
@@ -50,7 +50,7 @@ interface ICollection extends INode {
     /**
      * Returns a specific child node, referenced by its name
      *
-     * This method must throw Sabre\DAV\Exception\NotFound if the node does not
+     * This method must throw Tine20\DAV\Exception\NotFound if the node does not
      * exist.
      *
      * @param string $name

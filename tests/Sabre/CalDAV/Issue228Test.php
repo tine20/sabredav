@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\HTTP;
+namespace Tine20\CalDAV;
+use Tine20\HTTP;
 
 /**
  * This unittest is created to check if the time-range filter is working correctly with all-day-events
@@ -10,7 +10,7 @@ use Sabre\HTTP;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class Issue228Test extends \Sabre\DAVServerTest {
+class Issue228Test extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 

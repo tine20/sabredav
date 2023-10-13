@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
+namespace Tine20\CalDAV\Notifications;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This node represents a list of notifications.
@@ -11,7 +11,7 @@ use Sabre\DAV;
  * interface to allow the Notifications plugin to mark the collection
  * as a notifications collection.
  *
- * This collection should only return Sabre\CalDAV\Notifications\INode nodes as
+ * This collection should only return Tine20\CalDAV\Notifications\INode nodes as
  * its children.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).

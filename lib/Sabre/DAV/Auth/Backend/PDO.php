@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
 /**
  * This is an authentication backend that uses a file to manage passwords.

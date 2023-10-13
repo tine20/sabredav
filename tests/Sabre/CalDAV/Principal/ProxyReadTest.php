@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV\Principal;
+use Tine20\DAVACL;
 
 class ProxyReadTest extends \PHPUnit_Framework_TestCase {
 
@@ -39,7 +39,7 @@ class ProxyReadTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     function testDelete() {
 
@@ -49,7 +49,7 @@ class ProxyReadTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     function testSetName() {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\FSExt;
+namespace Tine20\DAV\FSExt;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Base node-class
@@ -19,7 +19,7 @@ abstract class Node extends DAV\FS\Node implements DAV\IProperties {
      * Updates properties on this node,
      *
      * @param array $properties
-     * @see Sabre\DAV\IProperties::updateProperties
+     * @see Tine20\DAV\IProperties::updateProperties
      * @return bool|array
      */
     public function updateProperties($properties) {

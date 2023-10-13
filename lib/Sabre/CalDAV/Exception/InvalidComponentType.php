@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Exception;
+namespace Tine20\CalDAV\Exception;
 
-use Sabre\DAV;
-use Sabre\CalDAV;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 /**
  * InvalidComponentType

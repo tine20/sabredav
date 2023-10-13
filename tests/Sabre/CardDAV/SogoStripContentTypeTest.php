@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
-class SogoStripContentType extends \Sabre\DAVServerTest {
+class SogoStripContentType extends \Tine20\DAVServerTest {
 
     protected $setupCardDAV = true;
     protected $carddavAddressBooks = array(

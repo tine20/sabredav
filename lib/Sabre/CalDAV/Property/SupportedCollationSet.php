@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
-use Sabre\DAV;
+namespace Tine20\CalDAV\Property;
+use Tine20\DAV;
 
 /**
  * supported-collation-set property

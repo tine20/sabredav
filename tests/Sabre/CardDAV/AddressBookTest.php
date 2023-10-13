@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 
 require_once 'Sabre/CardDAV/Backend/Mock.php';
@@ -8,7 +8,7 @@ require_once 'Sabre/CardDAV/Backend/Mock.php';
 class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CardDAV\AddressBook
+     * @var Tine20\CardDAV\AddressBook
      */
     protected $ab;
     protected $backend;
@@ -37,13 +37,13 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
     function testGetChild() {
 
         $card = $this->ab->getChild('card1');
-        $this->assertInstanceOf('Sabre\\CardDAV\\Card', $card);
+        $this->assertInstanceOf('Tine20\\CardDAV\\Card', $card);
         $this->assertEquals('card1', $card->getName());
 
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     function testGetChildNotFound() {
 
@@ -62,7 +62,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testCreateDirectory() {
 
@@ -89,7 +89,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetName() {
 
@@ -142,7 +142,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 

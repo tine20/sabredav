@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
@@ -32,7 +32,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]));
         $this->assertArrayHasKey('{DAV:}principal-collection-set',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}principal-collection-set']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}principal-collection-set']);
 
         $expected = array(
             'principals1/',
@@ -67,7 +67,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]));
         $this->assertArrayHasKey('{DAV:}current-user-principal',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\DAVACL\Property\Principal', $returnedProperties[200]['{DAV:}current-user-principal']);
+        $this->assertInstanceOf('Tine20\DAVACL\Property\Principal', $returnedProperties[200]['{DAV:}current-user-principal']);
         $this->assertEquals(Property\Principal::UNAUTHENTICATED, $returnedProperties[200]['{DAV:}current-user-principal']->getType());
 
         // This will force the login
@@ -89,7 +89,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]));
         $this->assertArrayHasKey('{DAV:}current-user-principal',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\DAVACL\Property\Principal', $returnedProperties[200]['{DAV:}current-user-principal']);
+        $this->assertInstanceOf('Tine20\DAVACL\Property\Principal', $returnedProperties[200]['{DAV:}current-user-principal']);
         $this->assertEquals(Property\Principal::HREF, $returnedProperties[200]['{DAV:}current-user-principal']->getType());
         $this->assertEquals('principals/admin/', $returnedProperties[200]['{DAV:}current-user-principal']->getHref());
 
@@ -115,7 +115,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]));
         $this->assertArrayHasKey('{DAV:}supported-privilege-set',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\\DAVACL\\Property\\SupportedPrivilegeSet', $returnedProperties[200]['{DAV:}supported-privilege-set']);
+        $this->assertInstanceOf('Tine20\\DAVACL\\Property\\SupportedPrivilegeSet', $returnedProperties[200]['{DAV:}supported-privilege-set']);
 
         $server = new DAV\Server();
         $prop = $returnedProperties[200]['{DAV:}supported-privilege-set'];
@@ -204,7 +204,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]),'The {DAV:}acl property did not return from the list. Full list: ' . print_r($returnedProperties,true));
         $this->assertArrayHasKey('{DAV:}acl',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\\DAVACL\\Property\\ACL', $returnedProperties[200]['{DAV:}acl']);
+        $this->assertInstanceOf('Tine20\\DAVACL\\Property\\ACL', $returnedProperties[200]['{DAV:}acl']);
 
     }
 
@@ -247,7 +247,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertEquals(1,count($returnedProperties[200]),'The {DAV:}acl-restrictions property did not return from the list. Full list: ' . print_r($returnedProperties,true));
         $this->assertArrayHasKey('{DAV:}acl-restrictions',$returnedProperties[200]);
-        $this->assertInstanceOf('Sabre\\DAVACL\\Property\\ACLRestrictions', $returnedProperties[200]['{DAV:}acl-restrictions']);
+        $this->assertInstanceOf('Tine20\\DAVACL\\Property\\ACLRestrictions', $returnedProperties[200]['{DAV:}acl-restrictions']);
 
     }
 
@@ -276,7 +276,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertTrue(isset($returnedProperties[200]));
         $this->assertTrue(isset($returnedProperties[200]['{DAV:}alternate-URI-set']));
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}alternate-URI-set']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}alternate-URI-set']);
 
         $this->assertEquals(array(), $returnedProperties[200]['{DAV:}alternate-URI-set']->getHrefs());
 
@@ -307,7 +307,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertTrue(isset($returnedProperties[200]));
         $this->assertTrue(isset($returnedProperties[200]['{DAV:}principal-URL']));
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\Href', $returnedProperties[200]['{DAV:}principal-URL']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\Href', $returnedProperties[200]['{DAV:}principal-URL']);
 
         $this->assertEquals('principals/user/', $returnedProperties[200]['{DAV:}principal-URL']->getHref());
 
@@ -338,7 +338,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertTrue(isset($returnedProperties[200]));
         $this->assertTrue(isset($returnedProperties[200]['{DAV:}group-member-set']));
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}group-member-set']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}group-member-set']);
 
         $this->assertEquals(array(), $returnedProperties[200]['{DAV:}group-member-set']->getHrefs());
 
@@ -369,7 +369,7 @@ class PluginPropertiesTest extends \PHPUnit_Framework_TestCase {
 
         $this->assertTrue(isset($returnedProperties[200]));
         $this->assertTrue(isset($returnedProperties[200]['{DAV:}group-membership']));
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}group-membership']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $returnedProperties[200]['{DAV:}group-membership']);
 
         $this->assertEquals(array(), $returnedProperties[200]['{DAV:}group-membership']->getHrefs());
 

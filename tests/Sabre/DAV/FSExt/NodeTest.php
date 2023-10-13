@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\FSExt;
-use Sabre\DAV;
+namespace Tine20\DAV\FSExt;
+use Tine20\DAV;
 
 require_once 'Sabre/TestUtil.php';
 
@@ -17,7 +17,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase {
 
     function tearDown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 

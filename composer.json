@@ -1,5 +1,5 @@
 {
-    "name": "sabre/dav",
+    "name": "tine20/sabredav",
     "type": "library",
     "description": "WebDAV Framework for PHP",
     "keywords": ["Framework", "WebDAV", "CalDAV", "CardDAV", "iCalendar"],
@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.3.1",
-        "sabre/vobject" : "~2.1.0",
+        "tine20/sabrevobject" : "3.5.3pl7",
         "ext-dom": "*",
         "ext-pcre": "*",
         "ext-spl": "*",
@@ -40,11 +40,11 @@
     },
     "autoload": {
         "psr-0" : {
-            "Sabre\\DAV"     : "lib/",
-            "Sabre\\HTTP"    : "lib/",
-            "Sabre\\DAVACL"  : "lib/",
-            "Sabre\\CalDAV"  : "lib/",
-            "Sabre\\CardDAV" : "lib/"
+            "Tine20\\DAV"     : "lib/",
+            "Tine20\\HTTP"    : "lib/",
+            "Tine20\\DAVACL"  : "lib/",
+            "Tine20\\CalDAV"  : "lib/",
+            "Tine20\\CardDAV" : "lib/"
         }
     },
     "support" : {

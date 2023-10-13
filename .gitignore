@@ -20,3 +20,4 @@ bin/phpunit
 bin/vobjectvalidate.php
 bin/phpdocmd
 bin/phpunit
+.idea

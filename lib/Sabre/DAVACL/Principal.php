@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Principal class
@@ -186,7 +186,7 @@ class Principal extends DAV\Node implements IPrincipal, DAV\IProperties, IACL {
      * Updates this principals properties.
      * 
      * @param array $mutations
-     * @see Sabre\DAV\IProperties::updateProperties
+     * @see Tine20\DAV\IProperties::updateProperties
      * @return bool|array
      */
     public function updateProperties($mutations) {
@@ -264,7 +264,7 @@ class Principal extends DAV\Node implements IPrincipal, DAV\IProperties, IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

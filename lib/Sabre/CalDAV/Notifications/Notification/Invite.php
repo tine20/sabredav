@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications\Notification;
+namespace Tine20\CalDAV\Notifications\Notification;
 
-use Sabre\CalDAV\SharingPlugin as SharingPlugin;
-use Sabre\DAV;
-use Sabre\CalDAV;
+use Tine20\CalDAV\SharingPlugin as SharingPlugin;
+use Tine20\DAV;
+use Tine20\CalDAV;
 
 /**
  * This class represents the cs:invite-notification notification element.
@@ -103,7 +103,7 @@ class Invite extends DAV\Property implements CalDAV\Notifications\INotificationT
     /**
      * The list of supported components
      *
-     * @var Sabre\CalDAV\Property\SupportedCalendarComponentSet
+     * @var Tine20\CalDAV\Property\SupportedCalendarComponentSet
      */
     protected $supportedComponents;
 
@@ -127,7 +127,7 @@ class Invite extends DAV\Property implements CalDAV\Notifications\INotificationT
      *   * summary      - Description of the share, can be the same as the
      *                    calendar, but may also be modified (optional).
      *   * supportedComponents - An instance of
-     *                    Sabre\CalDAV\Property\SupportedCalendarComponentSet.
+     *                    Tine20\CalDAV\Property\SupportedCalendarComponentSet.
      *                    This allows the client to determine which components
      *                    will be supported in the shared calendar. This is
      *                    also optional.

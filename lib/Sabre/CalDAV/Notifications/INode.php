@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\CalDAV\Notifications;
+namespace Tine20\CalDAV\Notifications;
 
 /**
  * This node represents a single notification.
  *
- * The signature is mostly identical to that of Sabre\DAV\IFile, but the get() method
+ * The signature is mostly identical to that of Tine20\DAV\IFile, but the get() method
  * MUST return an xml document that matches the requirements of the
  * 'caldav-notifications.txt' spec.
  *
@@ -20,7 +20,7 @@ interface INode {
 
     /**
      * This method must return an xml element, using the
-     * Sabre\CalDAV\Notifications\INotificationType classes.
+     * Tine20\CalDAV\Notifications\INotificationType classes.
      *
      * @return INotificationType
      */

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
+namespace Tine20\DAVACL\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This class represents the {DAV:}acl property
@@ -32,7 +32,7 @@ class Acl extends DAV\Property {
      * Constructor
      *
      * This object requires a structure similar to the return value from
-     * Sabre\DAVACL\Plugin::getACL().
+     * Tine20\DAVACL\Plugin::getACL().
      *
      * Each privilege is a an array with at least a 'privilege' property, and a
      * 'principal' property. A privilege may have a 'protected' property as

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 /**
  * HTTP Authentication baseclass
@@ -25,7 +25,7 @@ abstract class AbstractAuth {
     /**
      * HTTP response helper
      *
-     * @var Sabre\HTTP\Response
+     * @var Tine20\HTTP\Response
      */
     protected $httpResponse;
 
@@ -33,7 +33,7 @@ abstract class AbstractAuth {
     /**
      * HTTP request helper
      *
-     * @var Sabre\HTTP\Request
+     * @var Tine20\HTTP\Request
      */
     protected $httpRequest;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 class VersionTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\PartialUpdate;
+namespace Tine20\DAV\PartialUpdate;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This interface provides a way to modify only part of a target resource

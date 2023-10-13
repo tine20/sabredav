@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
 class VersionTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
 class PaymentRequiredTest extends \PHPUnit_Framework_TestCase {
 

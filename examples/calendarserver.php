@@ -29,33 +29,33 @@ set_error_handler("exception_error_handler");
 require_once 'vendor/autoload.php';
 
 // Backends
-$authBackend = new \Sabre\DAV\Auth\Backend\PDO($pdo);
-$calendarBackend = new \Sabre\CalDAV\Backend\PDO($pdo);
-$principalBackend = new \Sabre\DAVACL\PrincipalBackend\PDO($pdo);
+$authBackend = new \Tine20\DAV\Auth\Backend\PDO($pdo);
+$calendarBackend = new \Tine20\CalDAV\Backend\PDO($pdo);
+$principalBackend = new \Tine20\DAVACL\PrincipalBackend\PDO($pdo);
 
 // Directory structure 
 $tree = array(
-    new \Sabre\CalDAV\Principal\Collection($principalBackend),
-    new \Sabre\CalDAV\CalendarRootNode($principalBackend, $calendarBackend),
+    new \Tine20\CalDAV\Principal\Collection($principalBackend),
+    new \Tine20\CalDAV\CalendarRootNode($principalBackend, $calendarBackend),
 );
 
-$server = new \Sabre\DAV\Server($tree);
+$server = new \Tine20\DAV\Server($tree);
 
 if (isset($baseUri))
     $server->setBaseUri($baseUri);
 
 /* Server Plugins */
-$authPlugin = new \Sabre\DAV\Auth\Plugin($authBackend,'SabreDAV');
+$authPlugin = new \Tine20\DAV\Auth\Plugin($authBackend,'SabreDAV');
 $server->addPlugin($authPlugin);
 
-$aclPlugin = new \Sabre\DAVACL\Plugin();
+$aclPlugin = new \Tine20\DAVACL\Plugin();
 $server->addPlugin($aclPlugin);
 
-$caldavPlugin = new \Sabre\CalDAV\Plugin();
+$caldavPlugin = new \Tine20\CalDAV\Plugin();
 $server->addPlugin($caldavPlugin);
 
 // Support for html frontend
-$browser = new \Sabre\DAV\Browser\Plugin();
+$browser = new \Tine20\DAV\Browser\Plugin();
 $server->addPlugin($browser);
 
 // And off we go!

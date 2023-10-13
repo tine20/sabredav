@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 class ResponseTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\HTTP\ResponseMock
+     * @var Tine20\HTTP\ResponseMock
      */
     private $response;
 

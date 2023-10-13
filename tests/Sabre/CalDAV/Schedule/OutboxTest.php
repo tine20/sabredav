@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Schedule;
-use Sabre\CalDAV;
-use Sabre\DAV;
+namespace Tine20\CalDAV\Schedule;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 class OutboxTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAVACL\PrincipalBackend;
+namespace Tine20\DAVACL\PrincipalBackend;
 
 class Mock extends AbstractBackend {
 

@@ -1,16 +1,16 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 class AbstractBasicTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotAuthenticated
+     * @expectedException Tine20\DAV\Exception\NotAuthenticated
      */
     public function testAuthenticateNoHeaders() {
 
@@ -24,7 +24,7 @@ class AbstractBasicTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotAuthenticated
+     * @expectedException Tine20\DAV\Exception\NotAuthenticated
      */
     public function testAuthenticateUnknownUser() {
 

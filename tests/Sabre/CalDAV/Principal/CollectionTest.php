@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV\Principal;
+use Tine20\DAVACL;
 
 class CollectionTest extends \PHPUnit_Framework_TestCase {
 
@@ -12,7 +12,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
         $r = $col->getChildForPrincipal(array(
             'uri' => 'principals/admin',
         ));
-        $this->assertInstanceOf('Sabre\\CalDAV\\Principal\\User', $r);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Principal\\User', $r);
 
     }
 

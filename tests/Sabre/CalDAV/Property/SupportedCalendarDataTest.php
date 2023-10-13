@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
-use Sabre\CalDAV;
-use Sabre\DAV;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 class SupportedCalendarDataTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
-use Sabre\CalDAV;
+use Tine20\CalDAV;
 
 require_once 'Sabre/CalDAV/Backend/AbstractPDOTest.php';
 

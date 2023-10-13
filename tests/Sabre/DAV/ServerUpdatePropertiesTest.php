@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\DAV;
+use Tine20\HTTP;
 
 class ServerUpdatePropertiesTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\DAV;
 
 /**
  * CalendarObject interface

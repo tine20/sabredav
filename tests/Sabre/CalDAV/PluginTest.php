@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAVACL;
-use Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\CalDAV;
+use Tine20\DAVACL;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/CalDAV/TestUtil.php';
@@ -11,16 +11,16 @@ require_once 'Sabre/CalDAV/TestUtil.php';
 class PluginTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
     /**
-     * @var Sabre\CalDAV\Plugin
+     * @var Tine20\CalDAV\Plugin
      */
     protected $plugin;
     protected $response;
     /**
-     * @var Sabre\CalDAV\Backend\PDO
+     * @var Tine20\CalDAV\Backend\PDO
      */
     protected $caldavBackend;
 
@@ -468,12 +468,12 @@ END:VCALENDAR';
 
         $this->assertArrayHasKey('{http://calendarserver.org/ns/}calendar-proxy-read-for', $props[0][200]);
         $prop = $props[0][200]['{http://calendarserver.org/ns/}calendar-proxy-read-for'];
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $prop);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $prop);
         $this->assertEquals(array('principals/admin'), $prop->getHrefs());
 
         $this->assertArrayHasKey('{http://calendarserver.org/ns/}calendar-proxy-write-for', $props[0][200]);
         $prop = $props[0][200]['{http://calendarserver.org/ns/}calendar-proxy-write-for'];
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\HrefList', $prop);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\HrefList', $prop);
         $this->assertEquals(array('principals/admin'), $prop->getHrefs());
 
 
@@ -491,7 +491,7 @@ END:VCALENDAR';
 
         $prop = $props[0][200]['{DAV:}supported-report-set'];
 
-        $this->assertInstanceOf('\\Sabre\\DAV\\Property\\SupportedReportSet', $prop);
+        $this->assertInstanceOf('\\Tine20\\DAV\\Property\\SupportedReportSet', $prop);
         $value = array(
             '{DAV:}expand-property',
             '{DAV:}principal-property-search',
@@ -516,7 +516,7 @@ END:VCALENDAR';
 
         $prop = $props[0][200]['{DAV:}supported-report-set'];
 
-        $this->assertTrue($prop instanceof \Sabre\DAV\Property\SupportedReportSet);
+        $this->assertTrue($prop instanceof \Tine20\DAV\Property\SupportedReportSet);
         $value = array(
             '{urn:ietf:params:xml:ns:caldav}calendar-multiget',
             '{urn:ietf:params:xml:ns:caldav}calendar-query',

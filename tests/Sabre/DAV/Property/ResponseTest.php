@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase {
 
@@ -204,7 +204,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testSerialize
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testSerializeBreak() {
 

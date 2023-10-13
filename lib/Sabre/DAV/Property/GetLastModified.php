@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 /**
  * This property represents the {DAV:}getlastmodified property.

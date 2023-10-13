@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * supported-report-set property.

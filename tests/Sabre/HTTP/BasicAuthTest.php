@@ -1,17 +1,17 @@
 <?php
 
-namespace Sabre\HTTP;
+namespace Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 class BasicAuthTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\HTTP\ResponseMock
+     * @var Tine20\HTTP\ResponseMock
      */
     private $response;
     /**
-     * @var Sabre\HTTP\BasicAuth
+     * @var Tine20\HTTP\BasicAuth
      */
     private $basicAuth;
 

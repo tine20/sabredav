@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\DAVACL;
+use Tine20\HTTP;
 
 require_once 'Sabre/CalDAV/Backend/Mock.php';
 require_once 'Sabre/HTTP/ResponseMock.php';
@@ -12,11 +12,11 @@ require_once 'Sabre/HTTP/ResponseMock.php';
 class FreeBusyReportTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CalDAV\Plugin
+     * @var Tine20\CalDAV\Plugin
      */
     protected $plugin;
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -99,7 +99,7 @@ XML;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testFreeBusyReportNoTimeRange() {
 
@@ -115,7 +115,7 @@ XML;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotImplemented
+     * @expectedException Tine20\DAV\Exception\NotImplemented
      */
     function testFreeBusyReportWrongNode() {
 
@@ -137,7 +137,7 @@ XML;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testFreeBusyReportNoACLPlugin() {
 

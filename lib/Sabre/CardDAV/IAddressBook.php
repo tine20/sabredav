@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * AddressBook interface

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 class AddressBookQueryParserTest extends \PHPUnit_Framework_TestCase {
 
@@ -86,7 +86,7 @@ class AddressBookQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testFilterDoubleFilter() {
 
@@ -109,7 +109,7 @@ class AddressBookQueryParserTest extends \PHPUnit_Framework_TestCase {
 
     }
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testFilterCorruptTest() {
 
@@ -305,7 +305,7 @@ class AddressBookQueryParserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testBadTextMatch() {
 

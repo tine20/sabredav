@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
-use Sabre\DAV;
+namespace Tine20\DAVACL\Property;
+use Tine20\DAV;
 
 /**
  * Principal property

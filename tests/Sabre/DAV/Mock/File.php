@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Mock;
+namespace Tine20\DAV\Mock;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Mock File

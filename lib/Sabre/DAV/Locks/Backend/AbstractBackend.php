@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Locks\Backend;
+namespace Tine20\DAV\Locks\Backend;
 
-use Sabre\DAV\Locks;
+use Tine20\DAV\Locks;
 
 /**
  * This is an Abstract clas for lock backends.

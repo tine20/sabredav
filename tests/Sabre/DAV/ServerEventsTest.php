@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/DAV/AbstractServer.php';
 
@@ -63,7 +63,7 @@ class ServerEventsTest extends AbstractServer {
         $this->server->httpRequest = $req;
         $this->server->exec();
 
-        $this->assertInstanceOf('Sabre\\DAV\\Exception\\NotFound', $this->exception);
+        $this->assertInstanceOf('Tine20\\DAV\\Exception\\NotFound', $this->exception);
 
     }
 

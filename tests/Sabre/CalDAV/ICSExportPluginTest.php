@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\HTTP;
-use Sabre\VObject;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\HTTP;
+use Tine20\VObject;
+use Tine20\DAVACL;
 
 require_once 'Sabre/CalDAV/TestUtil.php';
 require_once 'Sabre/HTTP/ResponseMock.php';
@@ -137,7 +137,7 @@ class ICSExportPluginTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAVACL\Exception\NeedPrivileges
+     * @expectedException Tine20\DAVACL\Exception\NeedPrivileges
      */
     function testACLIntegrationBlocked() {
 

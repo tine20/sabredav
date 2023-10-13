@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\DAV\Tree;
+namespace Tine20\DAV\Tree;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * FileSystem Tree
  *
  * This class is an alternative to the standard ObjectTree. This tree can only
- * use Sabre\DAV\FS\Directory and File classes, but as a result it allows for a few
+ * use Tine20\DAV\FS\Directory and File classes, but as a result it allows for a few
  * optimizations that otherwise wouldn't be possible.
  *
  * Specifically copying and moving are much, much faster.

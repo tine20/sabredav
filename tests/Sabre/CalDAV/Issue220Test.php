@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 /**
  * This unittest is created to check for an endless loop in CalendarQueryValidator
@@ -11,7 +11,7 @@ use Sabre\HTTP;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class Issue220Test extends \Sabre\DAVServerTest {
+class Issue220Test extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 

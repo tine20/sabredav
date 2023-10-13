@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\HTTP;
-use Sabre\VObject;
+namespace Tine20\CalDAV;
+use Tine20\HTTP;
+use Tine20\VObject;
 
 /**
  * This unittest is created to check if queries for time-range include the start timestamp or not
@@ -11,7 +11,7 @@ use Sabre\VObject;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class GetEventsByTimerangeTest extends \Sabre\DAVServerTest {
+class GetEventsByTimerangeTest extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 

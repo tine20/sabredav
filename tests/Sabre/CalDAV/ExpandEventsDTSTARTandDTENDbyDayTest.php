@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\HTTP;
-use Sabre\VObject;
+namespace Tine20\CalDAV;
+use Tine20\HTTP;
+use Tine20\VObject;
 
 /**
  * This unittests is created to find out why recurring events have wrong DTSTART value
@@ -11,7 +11,7 @@ use Sabre\VObject;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class ExpandEventsDTSTARTandDTENDbyDayTest extends \Sabre\DAVServerTest {
+class ExpandEventsDTSTARTandDTENDbyDayTest extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 
@@ -84,9 +84,9 @@ END:VCALENDAR
 
         // check if DTSTARTs and DTENDs are correct
         foreach ($vObject->VEVENT as $vevent) {
-            /** @var $vevent Sabre\VObject\Component\VEvent */
+            /** @var $vevent Tine20\VObject\Component\VEvent */
             foreach ($vevent->children as $child) {
-                /** @var $child Sabre\VObject\Property */
+                /** @var $child Tine20\VObject\Property */
 
                 if ($child->name == 'DTSTART') {
                     // DTSTART has to be one of two valid values

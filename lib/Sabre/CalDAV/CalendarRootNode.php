@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAVACL\PrincipalBackend;
+use Tine20\DAVACL\PrincipalBackend;
 
 /**
  * Calendars collection
@@ -14,12 +14,12 @@ use Sabre\DAVACL\PrincipalBackend;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class CalendarRootNode extends \Sabre\DAVACL\AbstractPrincipalCollection {
+class CalendarRootNode extends \Tine20\DAVACL\AbstractPrincipalCollection {
 
     /**
      * CalDAV backend
      *
-     * @var Sabre\CalDAV\Backend\BackendInterface
+     * @var Tine20\CalDAV\Backend\BackendInterface
      */
     protected $caldavBackend;
 
@@ -48,7 +48,7 @@ class CalendarRootNode extends \Sabre\DAVACL\AbstractPrincipalCollection {
      * Returns the nodename
      *
      * We're overriding this, because the default will be the 'principalPrefix',
-     * and we want it to be Sabre\CalDAV\Plugin::CALENDAR_ROOT
+     * and we want it to be Tine20\CalDAV\Plugin::CALENDAR_ROOT
      *
      * @return string
      */
@@ -66,7 +66,7 @@ class CalendarRootNode extends \Sabre\DAVACL\AbstractPrincipalCollection {
      * supplied by the authentication backend.
      *
      * @param array $principal
-     * @return \Sabre\DAV\INode
+     * @return \Tine20\DAV\INode
      */
     public function getChildForPrincipal(array $principal) {
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 /**
  * The AddressBook class represents a CardDAV addressbook, owned by a specific user
@@ -298,7 +298,7 @@ class AddressBook extends DAV\Collection implements IAddressBook, DAV\IPropertie
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

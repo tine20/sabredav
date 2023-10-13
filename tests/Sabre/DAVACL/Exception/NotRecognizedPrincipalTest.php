@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL\Exception;
+namespace Tine20\DAVACL\Exception;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 class NotRecognizedPrincipalTest extends \PHPUnit_Framework_TestCase {
 

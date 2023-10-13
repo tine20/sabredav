@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Locks\Backend;
+namespace Tine20\DAV\Locks\Backend;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
 
@@ -15,7 +15,7 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
     function testSetup() {
 
        $backend = $this->getBackend();
-       $this->assertInstanceOf('Sabre\\DAV\\Locks\\Backend\\AbstractBackend', $backend);
+       $this->assertInstanceOf('Tine20\\DAV\\Locks\\Backend\\AbstractBackend', $backend);
 
     }
 

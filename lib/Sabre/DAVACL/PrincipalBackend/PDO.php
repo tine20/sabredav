@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\PrincipalBackend;
+namespace Tine20\DAVACL\PrincipalBackend;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 /**
  * PDO principal backend

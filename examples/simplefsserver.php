@@ -26,7 +26,7 @@ $publicDir = 'public';
 // Files we need
 require_once 'vendor/autoload.php';
 
-class MyCollection extends Sabre\DAV\Collection {
+class MyCollection extends Tine20\DAV\Collection {
 
   private $myPath;
 
@@ -58,10 +58,10 @@ class MyCollection extends Sabre\DAV\Collection {
         $path = $this->myPath . '/' . $name;
 
         // We have to throw a NotFound exception if the file didn't exist
-        if (!file\exists($this->myPath)) throw new \Sabre\DAV\Exception\NotFound('The file with name: ' . $name . ' could not be found');
+        if (!file\exists($this->myPath)) throw new \Tine20\DAV\Exception\NotFound('The file with name: ' . $name . ' could not be found');
         // Some added security
 
-        if ($name[0]=='.')  throw new \Sabre\DAV\Exception\Forbidden('Access denied');
+        if ($name[0]=='.')  throw new \Tine20\DAV\Exception\Forbidden('Access denied');
 
         if (is_dir($path)) {
 
@@ -83,7 +83,7 @@ class MyCollection extends Sabre\DAV\Collection {
 
 }
 
-class MyFile extends \Sabre\DAV\File {
+class MyFile extends \Tine20\DAV\File {
 
   private $myPath;
 
@@ -117,7 +117,7 @@ class MyFile extends \Sabre\DAV\File {
 $rootNode = new \MyCollection($publicDir);
 
 // The rootNode needs to be passed to the server object.
-$server = new \Sabre\DAV\Server($rootNode);
+$server = new \Tine20\DAV\Server($rootNode);
 
 // And off we go!
 $server->exec();

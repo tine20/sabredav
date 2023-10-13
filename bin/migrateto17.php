@@ -210,7 +210,7 @@ echo "Process completed!\n";
  * Parses some information from calendar objects, used for optimized
  * calendar-queries.
  *
- * Blantently copied from Sabre\CalDAV\Backend\PDO
+ * Blantently copied from Tine20\CalDAV\Backend\PDO
  *
  * Returns an array with the following keys:
  *   * etag
@@ -224,7 +224,7 @@ echo "Process completed!\n";
  */
 function getDenormalizedData($calendarData) {
 
-    $vObject = \Sabre\VObject\Reader::read($calendarData);
+    $vObject = \Tine20\VObject\Reader::read($calendarData);
     $componentType = null;
     $component = null;
     $firstOccurence = null;
@@ -236,7 +236,7 @@ function getDenormalizedData($calendarData) {
         }
     }
     if (!$componentType) {
-        throw new \Sabre\DAV\Exception\BadRequest('Calendar objects must have a VJOURNAL, VEVENT or VTODO component');
+        throw new \Tine20\DAV\Exception\BadRequest('Calendar objects must have a VJOURNAL, VEVENT or VTODO component');
     }
     if ($componentType === 'VEVENT') {
         $firstOccurence = $component->DTSTART->getDateTime()->getTimeStamp();
@@ -246,7 +246,7 @@ function getDenormalizedData($calendarData) {
                 $lastOccurence = $component->DTEND->getDateTime()->getTimeStamp();
             } elseif (isset($component->DURATION)) {
                 $endDate = clone $component->DTSTART->getDateTime();
-                $endDate->add(\Sabre\VObject\DateTimeParser::parse($component->DURATION->value));
+                $endDate->add(\Tine20\VObject\DateTimeParser::parse($component->DURATION->value));
                 $lastOccurence = $endDate->getTimeStamp();
             } elseif (!$component->DTSTART->hasTime()) {
                 $endDate = clone $component->DTSTART->getDateTime();
@@ -256,8 +256,8 @@ function getDenormalizedData($calendarData) {
                 $lastOccurence = $firstOccurence;
             }
         } else {
-            $it = new \Sabre\VObject\RecurrenceIterator($vObject, (string)$component->UID);
-            $maxDate = new DateTime(\Sabre\CalDAV\Backend\PDO::MAX_DATE);
+            $it = new \Tine20\VObject\RecurrenceIterator($vObject, (string)$component->UID);
+            $maxDate = new DateTime(\Tine20\CalDAV\Backend\PDO::MAX_DATE);
             if ($it->isInfinite()) {
                 $lastOccurence = $maxDate->getTimeStamp();
             } else {

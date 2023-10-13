@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * XML utilities for WebDAV
@@ -85,11 +85,11 @@ class XMLUtil {
     /**
      * This method provides a generic way to load a DOMDocument for WebDAV use.
      *
-     * This method throws a Sabre\DAV\Exception\BadRequest exception for any xml errors.
+     * This method throws a Tine20\DAV\Exception\BadRequest exception for any xml errors.
      * It does not preserve whitespace, and it converts the DAV: namespace to urn:DAV.
      *
      * @param string $xml
-     * @throws Sabre\DAV\Exception\BadRequest
+     * @throws Tine20\DAV\Exception\BadRequest
      * @return DOMDocument
      */
     static function loadDOMDocument($xml) {

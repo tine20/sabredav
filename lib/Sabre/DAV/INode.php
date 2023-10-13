@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * The INode interface is the base interface, and the parent class of both ICollection and IFile

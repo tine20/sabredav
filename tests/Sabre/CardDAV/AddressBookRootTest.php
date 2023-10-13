@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 class AddressBookRootTest extends \PHPUnit_Framework_TestCase {
 
@@ -24,7 +24,7 @@ class AddressBookRootTest extends \PHPUnit_Framework_TestCase {
         $children = $root->getChildren();
         $this->assertEquals(3, count($children));
 
-        $this->assertInstanceOf('Sabre\\CardDAV\\UserAddressBooks', $children[0]);
+        $this->assertInstanceOf('Tine20\\CardDAV\\UserAddressBooks', $children[0]);
         $this->assertEquals('user1', $children[0]->getName());
 
     }

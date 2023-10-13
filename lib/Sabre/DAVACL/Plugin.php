@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAVACL;
-use Sabre\DAV;
+namespace Tine20\DAVACL;
+use Tine20\DAV;
 
 /**
  * SabreDAV ACL Plugin
@@ -43,7 +43,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Reference to server object.
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -140,7 +140,7 @@ class Plugin extends DAV\ServerPlugin {
      * Returns a plugin name.
      *
      * Using this name other plugins will be able to access other plugins
-     * using Sabre\DAV\Server::getPlugin
+     * using Tine20\DAV\Server::getPlugin
      *
      * @return string
      */
@@ -182,7 +182,7 @@ class Plugin extends DAV\ServerPlugin {
      * @param array|string $privileges
      * @param int $recursion
      * @param bool $throwExceptions if set to false, this method won't throw exceptions.
-     * @throws Sabre\DAVACL\Exception\NeedPrivileges
+     * @throws Tine20\DAVACL\Exception\NeedPrivileges
      * @return bool
      */
     public function checkPrivileges($uri, $privileges, $recursion = self::R_PARENT, $throwExceptions = true) {
@@ -234,7 +234,7 @@ class Plugin extends DAV\ServerPlugin {
 
         $authPlugin = $this->server->getPlugin('auth');
         if (is_null($authPlugin)) return null;
-        /** @var $authPlugin Sabre\DAV\Auth\Plugin */
+        /** @var $authPlugin Tine20\DAV\Auth\Plugin */
 
         $userName = $authPlugin->getCurrentUser();
         if (!$userName) return null;
@@ -599,7 +599,7 @@ class Plugin extends DAV\ServerPlugin {
      *                                   If this is ommitted, the standard
      *                                   principal collection-set will be used.
      * @return array     This method returns an array structure similar to
-     *                  Sabre\DAV\Server::getPropertiesForPath. Returned
+     *                  Tine20\DAV\Server::getPropertiesForPath. Returned
      *                  properties are index by a HTTP status code.
      *
      */
@@ -678,11 +678,11 @@ class Plugin extends DAV\ServerPlugin {
 
         // Automatically mapping nodes implementing IPrincipal to the
         // {DAV:}principal resourcetype.
-        $server->resourceTypeMapping['Sabre\\DAVACL\\IPrincipal'] = '{DAV:}principal';
+        $server->resourceTypeMapping['Tine20\\DAVACL\\IPrincipal'] = '{DAV:}principal';
 
         // Mapping the group-member-set property to the HrefList property
         // class.
-        $server->propertyMap['{DAV:}group-member-set'] = 'Sabre\\DAV\\Property\\HrefList';
+        $server->propertyMap['{DAV:}group-member-set'] = 'Tine20\\DAV\\Property\\HrefList';
 
     }
 
@@ -965,7 +965,7 @@ class Plugin extends DAV\ServerPlugin {
                 $propertyDelta['{DAV:}group-member-set']->getHrefs()
             );
         } else {
-            throw new DAV\Exception('The group-member-set property MUST be an instance of Sabre\DAV\Property\HrefList or null');
+            throw new DAV\Exception('The group-member-set property MUST be an instance of Tine20\DAV\Property\HrefList or null');
         }
 
         if (!($node instanceof IPrincipal)) {

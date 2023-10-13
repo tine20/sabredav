@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/DAV/AbstractServer.php';

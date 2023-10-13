@@ -1,20 +1,20 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 abstract class AbstractServer extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\HTTP\ResponseMock
+     * @var Tine20\HTTP\ResponseMock
      */
     protected $response;
     protected $request;
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
     protected $tempDir = SABRE_TEMPDIR;

@@ -1,18 +1,18 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV;
+use Tine20\DAVACL;
 
 require_once 'Sabre/CalDAV/TestUtil.php';
 
 class CalendarObjectTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CalDAV\Backend_PDO
+     * @var Tine20\CalDAV\Backend_PDO
      */
     protected $backend;
     /**
-     * @var Sabre\CalDAV\Calendar
+     * @var Tine20\CalDAV\Calendar
      */
     protected $calendar;
     protected $principalBackend;
@@ -210,7 +210,7 @@ class CalendarObjectTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 

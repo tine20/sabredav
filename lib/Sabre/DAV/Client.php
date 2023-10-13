@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * SabreDAV DAV client
@@ -24,7 +24,7 @@ class Client {
      * respective class.
      *
      * The {DAV:}resourcetype property is automatically added. This maps to
-     * Sabre\DAV\Property\ResourceType
+     * Tine20\DAV\Property\ResourceType
      *
      * @var array
      */
@@ -103,7 +103,7 @@ class Client {
             $this->authType = self::AUTH_BASIC | self::AUTH_DIGEST;
         }
 
-        $this->propertyMap['{DAV:}resourcetype'] = 'Sabre\\DAV\\Property\\ResourceType';
+        $this->propertyMap['{DAV:}resourcetype'] = 'Tine20\\DAV\\Property\\ResourceType';
 
     }
 

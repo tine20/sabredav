@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\FSExt;
+namespace Tine20\DAV\FSExt;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Directory class
@@ -66,7 +66,7 @@ class Directory extends Node implements DAV\ICollection, DAV\IQuota {
     /**
      * Returns a specific child node, referenced by its name
      *
-     * This method must throw Sabre\DAV\Exception\NotFound if the node does not
+     * This method must throw Tine20\DAV\Exception\NotFound if the node does not
      * exist.
      *
      * @param string $name

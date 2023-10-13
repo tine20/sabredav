@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
 require_once 'Sabre/TestUtil.php';
 require_once 'Sabre/CalDAV/TestUtil.php';
@@ -11,7 +11,7 @@ class PDOMySQLTest extends AbstractPDOTest {
     function setup() {
 
         if (!SABRE_HASMYSQL) $this->markTestSkipped('MySQL driver is not available, or not properly configured');
-        $pdo = \Sabre\TestUtil::getMySQLDB();
+        $pdo = \Tine20\TestUtil::getMySQLDB();
         if (!$pdo) $this->markTestSkipped('Could not connect to mysql database');
 
         $pdo->query('DROP TABLE IF EXISTS calendarobjects, calendars');

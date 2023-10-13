@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\DAV\PartialUpdate;
+namespace Tine20\DAV\PartialUpdate;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/DAV/PartialUpdate/FileMock.php';
 
-class PluginTest extends \Sabre\DAVServerTest {
+class PluginTest extends \Tine20\DAVServerTest {
 
     protected $node;
     protected $plugin;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Browser;
+namespace Tine20\DAV\Browser;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * This is a simple plugin that will map any GET request for non-files to
@@ -19,7 +19,7 @@ class MapGetToPropFind extends DAV\ServerPlugin {
     /**
      * reference to server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 

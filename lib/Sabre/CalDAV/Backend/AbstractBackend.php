@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
+namespace Tine20\CalDAV\Backend;
 
-use Sabre\VObject;
-use Sabre\CalDAV;
+use Tine20\VObject;
+use Tine20\CalDAV;
 
 /**
  * Abstract Calendaring backend. Extend this class to create your own backends.
@@ -70,7 +70,7 @@ abstract class AbstractBackend implements BackendInterface {
      * query.
      *
      * The list of filters are specified as an array. The exact array is
-     * documented by \Sabre\CalDAV\CalendarQueryParser.
+     * documented by \Tine20\CalDAV\CalendarQueryParser.
      *
      * Note that it is extremely likely that getCalendarObject for every path
      * returned from this method will be called almost immediately after. You
@@ -99,7 +99,7 @@ abstract class AbstractBackend implements BackendInterface {
      * time-range filter specified on a VEVENT must for instance also handle
      * recurrence rules correctly.
      * A good example of how to interprete all these filters can also simply
-     * be found in \Sabre\CalDAV\CalendarQueryFilter. This class is as correct
+     * be found in \Tine20\CalDAV\CalendarQueryFilter. This class is as correct
      * as possible, so it gives you a good idea on what type of stuff you need
      * to think of.
      *
@@ -112,7 +112,7 @@ abstract class AbstractBackend implements BackendInterface {
         $result = array();
         $objects = $this->getCalendarObjects($calendarId);
 
-        $validator = new \Sabre\CalDAV\CalendarQueryValidator();
+        $validator = new \Tine20\CalDAV\CalendarQueryValidator();
 
         foreach($objects as $object) {
 

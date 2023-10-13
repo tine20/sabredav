@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
-use Sabre\DAVACL;
+namespace Tine20\CalDAV\Principal;
+use Tine20\DAVACL;
 
 class UserTest extends \PHPUnit_Framework_TestCase {
 
@@ -24,7 +24,7 @@ class UserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     function testCreateFile() {
 
@@ -34,7 +34,7 @@ class UserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     function testCreateDirectory() {
 
@@ -47,7 +47,7 @@ class UserTest extends \PHPUnit_Framework_TestCase {
 
         $u = $this->getInstance();
         $child = $u->getChild('calendar-proxy-read');
-        $this->assertInstanceOf('Sabre\\CalDAV\\Principal\\ProxyRead', $child);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Principal\\ProxyRead', $child);
 
     }
 
@@ -55,12 +55,12 @@ class UserTest extends \PHPUnit_Framework_TestCase {
 
         $u = $this->getInstance();
         $child = $u->getChild('calendar-proxy-write');
-        $this->assertInstanceOf('Sabre\\CalDAV\\Principal\\ProxyWrite', $child);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Principal\\ProxyWrite', $child);
 
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     function testGetChildNotFound() {
 
@@ -70,7 +70,7 @@ class UserTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     function testGetChildNotFound2() {
 
@@ -84,8 +84,8 @@ class UserTest extends \PHPUnit_Framework_TestCase {
         $u = $this->getInstance();
         $children = $u->getChildren();
         $this->assertEquals(2, count($children));
-        $this->assertInstanceOf('Sabre\\CalDAV\\Principal\\ProxyRead', $children[0]);
-        $this->assertInstanceOf('Sabre\\CalDAV\\Principal\\ProxyWrite', $children[1]);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Principal\\ProxyRead', $children[0]);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Principal\\ProxyWrite', $children[1]);
 
     }
 

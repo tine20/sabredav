@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/DAV/AbstractServer.php';
@@ -22,7 +22,7 @@ class ServerSimpleTest extends AbstractServer{
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testConstructIncorrectObj() {
 
@@ -36,7 +36,7 @@ class ServerSimpleTest extends AbstractServer{
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     function testConstructInvalidArg() {
 
@@ -385,7 +385,7 @@ class ServerSimpleTest extends AbstractServer{
     }
 
     /**
-     * @covers \Sabre\DAV\Server::guessBaseUri
+     * @covers \Tine20\DAV\Server::guessBaseUri
      */
     function testGuessBaseUri() {
 
@@ -404,7 +404,7 @@ class ServerSimpleTest extends AbstractServer{
 
     /**
      * @depends testGuessBaseUri
-     * @covers Sabre\DAV\Server::guessBaseUri
+     * @covers Tine20\DAV\Server::guessBaseUri
      */
     function testGuessBaseUriPercentEncoding() {
 
@@ -423,7 +423,7 @@ class ServerSimpleTest extends AbstractServer{
 
     /**
      * @depends testGuessBaseUri
-     * @covers \Sabre\DAV\Server::guessBaseUri
+     * @covers \Tine20\DAV\Server::guessBaseUri
      */
     /*
     function testGuessBaseUriPercentEncoding2() {
@@ -487,7 +487,7 @@ class ServerSimpleTest extends AbstractServer{
 
 
     /**
-     * @covers \Sabre\DAV\Server::guessBaseUri
+     * @covers \Tine20\DAV\Server::guessBaseUri
      * @depends testGuessBaseUri
      */
     function testGuessBaseUriQueryString() {
@@ -506,9 +506,9 @@ class ServerSimpleTest extends AbstractServer{
     }
 
     /**
-     * @covers \Sabre\DAV\Server::guessBaseUri
+     * @covers \Tine20\DAV\Server::guessBaseUri
      * @depends testGuessBaseUri
-     * @expectedException \Sabre\DAV\Exception
+     * @expectedException \Tine20\DAV\Exception
      */
     function testGuessBaseUriBadConfig() {
 

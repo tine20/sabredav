@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
-class SharingPluginTest extends \Sabre\DAVServerTest {
+class SharingPluginTest extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
     protected $setupCalDAVSharing = true;
@@ -45,7 +45,7 @@ class SharingPluginTest extends \Sabre\DAVServerTest {
 
     function testSimple() {
 
-        $this->assertInstanceOf('Sabre\\CalDAV\\SharingPlugin', $this->server->getPlugin('caldav-sharing'));
+        $this->assertInstanceOf('Tine20\\CalDAV\\SharingPlugin', $this->server->getPlugin('caldav-sharing'));
 
     }
 
@@ -64,8 +64,8 @@ class SharingPluginTest extends \Sabre\DAVServerTest {
             '{' . Plugin::NS_CALENDARSERVER . '}allowed-sharing-modes',
         ));
 
-        $this->assertInstanceOf('Sabre\\CalDAV\\Property\\Invite', $props['{' . Plugin::NS_CALENDARSERVER . '}invite']);
-        $this->assertInstanceOf('Sabre\\CalDAV\\Property\\AllowedSharingModes', $props['{' . Plugin::NS_CALENDARSERVER . '}allowed-sharing-modes']);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Property\\Invite', $props['{' . Plugin::NS_CALENDARSERVER . '}invite']);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Property\\AllowedSharingModes', $props['{' . Plugin::NS_CALENDARSERVER . '}allowed-sharing-modes']);
 
     }
 
@@ -76,8 +76,8 @@ class SharingPluginTest extends \Sabre\DAVServerTest {
             '{' . Plugin::NS_CALENDARSERVER . '}invite',
         ));
 
-        $this->assertInstanceOf('Sabre\\CalDAV\\Property\\Invite', $props['{' . Plugin::NS_CALENDARSERVER . '}invite']);
-        $this->assertInstanceOf('Sabre\\DAV\\Property\\IHref', $props['{' . Plugin::NS_CALENDARSERVER . '}shared-url']);
+        $this->assertInstanceOf('Tine20\\CalDAV\\Property\\Invite', $props['{' . Plugin::NS_CALENDARSERVER . '}invite']);
+        $this->assertInstanceOf('Tine20\\DAV\\Property\\IHref', $props['{' . Plugin::NS_CALENDARSERVER . '}shared-url']);
 
     }
 

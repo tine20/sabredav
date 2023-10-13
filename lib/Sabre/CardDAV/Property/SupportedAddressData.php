@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV\Property;
+namespace Tine20\CardDAV\Property;
 
-use Sabre\DAV;
-use Sabre\CardDAV;
+use Tine20\DAV;
+use Tine20\CardDAV;
 
 /**
  * Supported-address-data property

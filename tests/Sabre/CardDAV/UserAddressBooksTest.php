@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CardDAV\UserAddressBooks
+     * @var Tine20\CardDAV\UserAddressBooks
      */
     protected $s;
     protected $backend;
@@ -27,7 +27,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetName() {
 
@@ -36,7 +36,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testDelete() {
 
@@ -51,7 +51,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testCreateFile() {
 
@@ -60,7 +60,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testCreateDirectory() {
 
@@ -71,13 +71,13 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     function testGetChild() {
 
         $child = $this->s->getChild('book1');
-        $this->assertInstanceOf('Sabre\\CardDAV\\AddressBook', $child);
+        $this->assertInstanceOf('Tine20\\CardDAV\\AddressBook', $child);
         $this->assertEquals('book1', $child->getName());
 
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     function testGetChild404() {
 
@@ -89,7 +89,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
 
         $children = $this->s->getChildren();
         $this->assertEquals(1, count($children));
-        $this->assertInstanceOf('Sabre\\CardDAV\\AddressBook', $children[0]);
+        $this->assertInstanceOf('Tine20\\CardDAV\\AddressBook', $children[0]);
         $this->assertEquals('book1', $children[0]->getName());
 
     }
@@ -112,7 +112,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\InvalidResourceType
+     * @expectedException Tine20\DAV\Exception\InvalidResourceType
      */
     function testCreateExtendedCollectionInvalid() {
 
@@ -144,7 +144,7 @@ class UserAddressBooksTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 

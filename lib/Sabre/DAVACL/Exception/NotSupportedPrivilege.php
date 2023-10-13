@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL\Exception;
+namespace Tine20\DAVACL\Exception;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * If a client tried to set a privilege that doesn't exist, this exception will

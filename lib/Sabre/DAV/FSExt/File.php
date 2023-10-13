@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\FSExt;
-use Sabre\DAV;
+namespace Tine20\DAV\FSExt;
+use Tine20\DAV;
 
 /**
  * File class

@@ -13,7 +13,7 @@ require_once 'vendor/autoload.php';
 $u = 'admin';
 $p = '1234';
 
-$auth = new \Sabre\HTTP\BasicAuth();
+$auth = new \Tine20\HTTP\BasicAuth();
 
 $result = $auth->getUserPass();
 

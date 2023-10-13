@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
 use
-    Sabre\DAV,
+    Tine20\DAV,
     DOMDocument;
 
 class LockedTest extends \PHPUnit_Framework_TestCase {

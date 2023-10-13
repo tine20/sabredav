@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Property;
+namespace Tine20\DAV\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 class ResourceTypeTest extends \PHPUnit_Framework_TestCase {
 

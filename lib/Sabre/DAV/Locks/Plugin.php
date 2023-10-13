@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Locks;
+namespace Tine20\DAV\Locks;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Locking plugin
@@ -10,8 +10,8 @@ use Sabre\DAV;
  * This plugin provides locking support to a WebDAV server.
  * The easiest way to get started, is by hooking it up as such:
  *
- * $lockBackend = new Sabre\DAV\Locks\Backend\File('./mylockdb');
- * $lockPlugin = new Sabre\DAV\Locks\Plugin($lockBackend);
+ * $lockBackend = new Tine20\DAV\Locks\Backend\File('./mylockdb');
+ * $lockPlugin = new Tine20\DAV\Locks\Plugin($lockBackend);
  * $server->addPlugin($lockPlugin);
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
@@ -30,7 +30,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * server
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -66,7 +66,7 @@ class Plugin extends DAV\ServerPlugin {
      * Returns a plugin name.
      *
      * Using this name other plugins will be able to access other plugins
-     * using Sabre\DAV\Server::getPlugin
+     * using Tine20\DAV\Server::getPlugin
      *
      * @return string
      */
@@ -216,7 +216,7 @@ class Plugin extends DAV\ServerPlugin {
     /**
      * Returns all lock information on a particular uri
      *
-     * This function should return an array with Sabre\DAV\Locks\LockInfo objects. If there are no locks on a file, return an empty array.
+     * This function should return an array with Tine20\DAV\Locks\LockInfo objects. If there are no locks on a file, return an empty array.
      *
      * Additionally there is also the possibility of locks on parent nodes, so we'll need to traverse every part of the tree
      * If the $returnChildLocks argument is set to true, we'll also traverse all the children of the object
@@ -449,7 +449,7 @@ class Plugin extends DAV\ServerPlugin {
      * It will check if the requested url is locked, and see if the correct lock tokens are passed
      *
      * @param mixed $urls List of relevant urls. Can be an array, a string or nothing at all for the current request uri
-     * @param mixed $lastLock This variable will be populated with the last checked lock object (Sabre\DAV\Locks\LockInfo)
+     * @param mixed $lastLock This variable will be populated with the last checked lock object (Tine20\DAV\Locks\LockInfo)
      * @param bool $checkChildLocks If set to true, this function will also look for any locks set on child resources of the supplied urls. This is needed for for example deletion of entire trees.
      * @return bool
      */
@@ -614,7 +614,7 @@ class Plugin extends DAV\ServerPlugin {
     }
 
     /**
-     * Parses a webdav lock xml body, and returns a new Sabre\DAV\Locks\LockInfo object
+     * Parses a webdav lock xml body, and returns a new Tine20\DAV\Locks\LockInfo object
      *
      * @param string $body
      * @return DAV\Locks\LockInfo

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 /**
  * AddressBook rootnode
@@ -18,7 +18,7 @@ class AddressBookRoot extends DAVACL\AbstractPrincipalCollection {
     /**
      * Principal Backend
      *
-     * @var Sabre\DAVACL\PrincipalBackend\BackendInteface
+     * @var Tine20\DAVACL\PrincipalBackend\BackendInteface
      */
     protected $principalBackend;
 
@@ -69,7 +69,7 @@ class AddressBookRoot extends DAVACL\AbstractPrincipalCollection {
      * supplied by the authentication backend.
      *
      * @param array $principal
-     * @return \Sabre\DAV\INode
+     * @return \Tine20\DAV\INode
      */
     public function getChildForPrincipal(array $principal) {
 

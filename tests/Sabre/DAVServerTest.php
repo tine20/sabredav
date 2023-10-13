@@ -38,7 +38,7 @@ abstract class DAVServerTest extends \PHPUnit_Framework_TestCase {
     protected $carddavCards = array();
 
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
     protected $tree = array();
@@ -48,27 +48,27 @@ abstract class DAVServerTest extends \PHPUnit_Framework_TestCase {
     protected $principalBackend;
 
     /**
-     * @var Sabre\CalDAV\Plugin
+     * @var Tine20\CalDAV\Plugin
      */
     protected $caldavPlugin;
 
     /**
-     * @var Sabre\CardDAV\Plugin
+     * @var Tine20\CardDAV\Plugin
      */
     protected $carddavPlugin;
 
     /**
-     * @var Sabre\DAVACL\Plugin
+     * @var Tine20\DAVACL\Plugin
      */
     protected $aclPlugin;
 
     /**
-     * @var Sabre\CalDAV\SharingPlugin
+     * @var Tine20\CalDAV\SharingPlugin
      */
     protected $caldavSharingPlugin;
 
     /**
-     * @var Sabre\DAV\Auth\Plugin
+     * @var Tine20\DAV\Auth\Plugin
      */
     protected $authPlugin;
 
@@ -117,11 +117,11 @@ abstract class DAVServerTest extends \PHPUnit_Framework_TestCase {
     /**
      * Makes a request, and returns a response object.
      *
-     * You can either pass an instance of Sabre\HTTP\Request, or an array,
+     * You can either pass an instance of Tine20\HTTP\Request, or an array,
      * which will then be used as the _SERVER array.
      *
-     * @param array|\Sabre\HTTP\Request $request
-     * @return \Sabre\HTTP\Response
+     * @param array|\Tine20\HTTP\Request $request
+     * @return \Tine20\HTTP\Response
      */
     function request($request) {
 

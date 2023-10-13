@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Locks;
+namespace Tine20\DAV\Locks;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 require_once 'Sabre/DAV/AbstractServer.php';
@@ -11,7 +11,7 @@ require_once 'Sabre/DAV/AbstractServer.php';
 class GetIfConditionsTest extends DAV\AbstractServer {
 
     /**
-     * @var Sabre\DAV\Locks\Plugin
+     * @var Tine20\DAV\Locks\Plugin
      */
     protected $locksPlugin;
 

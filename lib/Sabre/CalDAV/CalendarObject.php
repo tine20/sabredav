@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
 /**
  * The CalendarObject represents a single VEVENT or VTODO within a Calendar.
@@ -9,12 +9,12 @@ namespace Sabre\CalDAV;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class CalendarObject extends \Sabre\DAV\File implements ICalendarObject, \Sabre\DAVACL\IACL {
+class CalendarObject extends \Tine20\DAV\File implements ICalendarObject, \Tine20\DAVACL\IACL {
 
     /**
-     * Sabre\CalDAV\Backend\BackendInterface
+     * Tine20\CalDAV\Backend\BackendInterface
      *
-     * @var Sabre\CalDAV\Backend\AbstractBackend
+     * @var Tine20\CalDAV\Backend\AbstractBackend
      */
     protected $caldavBackend;
 
@@ -253,7 +253,7 @@ class CalendarObject extends \Sabre\DAV\File implements ICalendarObject, \Sabre\
      */
     public function setACL(array $acl) {
 
-        throw new \Sabre\DAV\Exception\MethodNotAllowed('Changing ACL is not yet supported');
+        throw new \Tine20\DAV\Exception\MethodNotAllowed('Changing ACL is not yet supported');
 
     }
 
@@ -261,7 +261,7 @@ class CalendarObject extends \Sabre\DAV\File implements ICalendarObject, \Sabre\
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See \Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See \Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

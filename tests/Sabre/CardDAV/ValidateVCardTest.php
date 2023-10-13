@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
-use Sabre\HTTP;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\HTTP;
+use Tine20\DAVACL;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 

@@ -1,16 +1,16 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
 class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @covers Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     function testIfMatchNoNode() {
 
@@ -27,7 +27,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfMatchHasNode() {
 
@@ -44,8 +44,8 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers \Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     function testIfMatchWrongEtag() {
 
@@ -62,7 +62,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfMatchCorrectEtag() {
 
@@ -81,7 +81,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     /**
      * Evolution sometimes uses \" instead of " for If-Match headers.
      *
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      * @depends testIfMatchCorrectEtag
      */
     function testIfMatchEvolutionEtag() {
@@ -99,7 +99,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfMatchMultiple() {
 
@@ -116,7 +116,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfNoneMatchNoNode() {
 
@@ -133,8 +133,8 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers \Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     function testIfNoneMatchHasNode() {
 
@@ -151,7 +151,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfNoneMatchWrongEtag() {
 
@@ -168,7 +168,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     function testIfNoneMatchWrongEtagMultiple() {
 
@@ -185,8 +185,8 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers \Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     public function testIfNoneMatchCorrectEtag() {
 
@@ -203,8 +203,8 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers \Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     public function testIfNoneMatchCorrectEtagMultiple() {
 
@@ -221,7 +221,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfNoneMatchCorrectEtagAsGet() {
 
@@ -240,7 +240,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfModifiedSinceUnModified() {
 
@@ -263,7 +263,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfModifiedSinceModified() {
 
@@ -280,7 +280,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfModifiedSinceInvalidDate() {
 
@@ -299,7 +299,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfModifiedSinceInvalidDate2() {
 
@@ -317,7 +317,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfUnmodifiedSinceUnModified() {
 
@@ -334,8 +334,8 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
-     * @expectedException Sabre\DAV\Exception\PreconditionFailed
+     * @covers \Tine20\DAV\Server::checkPreconditions
+     * @expectedException Tine20\DAV\Exception\PreconditionFailed
      */
     public function testIfUnmodifiedSinceModified() {
 
@@ -352,7 +352,7 @@ class ServerPreconditionsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \Sabre\DAV\Server::checkPreconditions
+     * @covers \Tine20\DAV\Server::checkPreconditions
      */
     public function testIfUnmodifiedSinceInvalidDate() {
 

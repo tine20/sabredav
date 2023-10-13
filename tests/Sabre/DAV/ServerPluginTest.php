@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV;
-use Sabre\HTTP;
+namespace Tine20\DAV;
+use Tine20\HTTP;
 
 require_once 'Sabre/DAV/AbstractServer.php';
 require_once 'Sabre/DAV/TestPlugin.php';
@@ -9,7 +9,7 @@ require_once 'Sabre/DAV/TestPlugin.php';
 class ServerPluginTest extends AbstractServer {
 
     /**
-     * @var Sabre\DAV\TestPlugin
+     * @var Tine20\DAV\TestPlugin
      */
     protected $testPlugin;
 
@@ -24,7 +24,7 @@ class ServerPluginTest extends AbstractServer {
     }
 
     /**
-     * @covers \Sabre\DAV\ServerPlugin
+     * @covers \Tine20\DAV\ServerPlugin
      */
     function testBaseClass() {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
 /**
  * MethodNotAllowed
@@ -11,7 +11,7 @@ namespace Sabre\DAV\Exception;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class MethodNotAllowed extends \Sabre\DAV\Exception {
+class MethodNotAllowed extends \Tine20\DAV\Exception {
 
     /**
      * Returns the HTTP statuscode for this exception
@@ -29,10 +29,10 @@ class MethodNotAllowed extends \Sabre\DAV\Exception {
      *
      * The headers must be returned as an array.
      *
-     * @param \Sabre\DAV\Server $server
+     * @param \Tine20\DAV\Server $server
      * @return array
      */
-    public function getHTTPHeaders(\Sabre\DAV\Server $server) {
+    public function getHTTPHeaders(\Tine20\DAV\Server $server) {
 
         $methods = $server->getAllowedMethods($server->getRequestUri());
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\DAVServerTest;
-use Sabre\HTTP;
+use Tine20\DAVServerTest;
+use Tine20\HTTP;
 
 /**
  * Tests related to the PUT request.

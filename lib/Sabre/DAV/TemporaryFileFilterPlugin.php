@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * Temporary File Filter Plugin
@@ -47,7 +47,7 @@ class TemporaryFileFilterPlugin extends ServerPlugin {
     /**
      * A reference to the main Server class
      *
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
 
@@ -80,7 +80,7 @@ class TemporaryFileFilterPlugin extends ServerPlugin {
      * Initialize the plugin
      *
      * This is called automatically be the Server class after this plugin is
-     * added with Sabre\DAV\Server::addPlugin()
+     * added with Tine20\DAV\Server::addPlugin()
      *
      * @param Server $server
      * @return void

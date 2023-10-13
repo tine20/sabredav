@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Backend;
-use Sabre\CalDAV;
-use Sabre\DAV;
+namespace Tine20\CalDAV\Backend;
+use Tine20\CalDAV;
+use Tine20\DAV;
 
 abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
 
@@ -148,7 +148,7 @@ abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testCreateCalendarAndFetch
-     * @expectedException \Sabre\DAV\Exception
+     * @expectedException \Tine20\DAV\Exception
      */
     function testCreateCalendarIncorrectComponentSet() {;
 
@@ -183,7 +183,7 @@ abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      * @depends testCreateCalendarObject
      */
     function testCreateCalendarObjectNoComponent() {

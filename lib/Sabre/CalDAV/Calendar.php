@@ -1,15 +1,15 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 /**
  * This object represents a CalDAV calendar.
  *
  * A calendar can contain multiple TODO and or Events. These are represented
- * as \Sabre\CalDAV\CalendarObject objects.
+ * as \Tine20\CalDAV\CalendarObject objects.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)
@@ -103,7 +103,7 @@ class Calendar implements ICalendar, DAV\IProperties, DAVACL\IACL {
      * The contained calendar objects are for example Events or Todo's.
      *
      * @param string $name
-     * @return \Sabre\CalDAV\ICalendarObject
+     * @return \Tine20\CalDAV\ICalendarObject
      */
     public function getChild($name) {
 
@@ -323,7 +323,7 @@ class Calendar implements ICalendar, DAV\IProperties, DAVACL\IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See \Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See \Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,
@@ -362,7 +362,7 @@ class Calendar implements ICalendar, DAV\IProperties, DAVACL\IACL {
      * query.
      *
      * The list of filters are specified as an array. The exact array is
-     * documented by Sabre\CalDAV\CalendarQueryParser.
+     * documented by Tine20\CalDAV\CalendarQueryParser.
      *
      * @param array $filters
      * @return array

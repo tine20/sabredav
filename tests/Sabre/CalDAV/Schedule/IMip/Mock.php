@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV\Schedule\IMip;
+namespace Tine20\CalDAV\Schedule\IMip;
 
 /**
  * iMIP handler.
@@ -16,7 +16,7 @@ namespace Sabre\CalDAV\Schedule\IMip;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class Mock extends \Sabre\CalDAV\Schedule\IMip {
+class Mock extends \Tine20\CalDAV\Schedule\IMip {
 
     protected $emails = array();
 

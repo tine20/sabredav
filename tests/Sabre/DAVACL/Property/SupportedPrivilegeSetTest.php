@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
+namespace Tine20\DAVACL\Property;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 

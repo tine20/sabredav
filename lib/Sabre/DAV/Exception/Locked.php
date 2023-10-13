@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Exception;
+namespace Tine20\DAV\Exception;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * Locked
@@ -18,7 +18,7 @@ class Locked extends DAV\Exception {
     /**
      * Lock information
      *
-     * @var Sabre\DAV\Locks\LockInfo
+     * @var Tine20\DAV\Locks\LockInfo
      */
     protected $lock;
 

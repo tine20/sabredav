@@ -1,21 +1,21 @@
 <?php
 
-namespace Sabre\DAV\Tree;
+namespace Tine20\DAV\Tree;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
- * @covers Sabre\DAV\Tree
- * @covers Sabre\DAV\Tree\Filesystem
- * @covers Sabre\DAV\FS\Node
- * @covers Sabre\DAV\FS\File
- * @covers Sabre\DAV\FS\Directory
+ * @covers Tine20\DAV\Tree
+ * @covers Tine20\DAV\Tree\Filesystem
+ * @covers Tine20\DAV\FS\Node
+ * @covers Tine20\DAV\FS\File
+ * @covers Tine20\DAV\FS\Directory
  */
 class FilesystemTest extends \PHPUnit_Framework_TestCase {
 
     function setUp() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
         file_put_contents(SABRE_TEMPDIR. '/file.txt','Body');
         mkdir(SABRE_TEMPDIR.'/dir');
         file_put_contents(SABRE_TEMPDIR.'/dir/subfile.txt','Body');
@@ -24,7 +24,7 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase {
 
     function tearDown() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 
@@ -37,7 +37,7 @@ class FilesystemTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException \Sabre\DAV\Exception\NotFound
+     * @expectedException \Tine20\DAV\Exception\NotFound
      */
     function testGetNodeForPath_DoesntExist() {
 

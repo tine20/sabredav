@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 class BasicNodeTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testPut() {
 
@@ -15,7 +15,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testGet() {
 
@@ -47,7 +47,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testDelete() {
 
@@ -57,7 +57,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testSetName() {
 
@@ -99,7 +99,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     public function testGetChild404() {
 
@@ -109,7 +109,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testCreateFile() {
 
@@ -119,7 +119,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     public function testCreateDirectory() {
 
@@ -148,7 +148,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      * @depends testSimpleDirectoryConstruct
      */
     public function testSimpleDirectoryBadParam() {
@@ -197,7 +197,7 @@ class BasicNodeTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testSimpleDirectoryConstruct
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      */
     public function testSimpleDirectoryGetChild404() {
 

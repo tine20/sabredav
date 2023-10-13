@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV\Locks\Backend;
+namespace Tine20\DAV\Locks\Backend;
 
-use Sabre\DAV\Locks\LockInfo;
+use Tine20\DAV\Locks\LockInfo;
 
 /**
  * This Lock Backend stores all its data in the filesystem in separate file per
@@ -44,7 +44,7 @@ class FS extends AbstractBackend {
 
 
     /**
-     * Returns a list of Sabre\DAV\Locks\LockInfo objects
+     * Returns a list of Tine20\DAV\Locks\LockInfo objects
      *
      * This method should return all the locks for a particular uri, including
      * locks that might be set on a parent uri.

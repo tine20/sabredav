@@ -1,15 +1,15 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
 class CardTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CardDAV\Card
+     * @var Tine20\CardDAV\Card
      */
     protected $card;
     /**
-     * @var Sabre\CardDAV\MockBackend
+     * @var Tine20\CardDAV\MockBackend
      */
     protected $backend;
 
@@ -165,7 +165,7 @@ class CardTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 

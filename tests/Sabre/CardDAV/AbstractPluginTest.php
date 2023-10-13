@@ -1,22 +1,22 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
+use Tine20\DAV;
+use Tine20\DAVACL;
 
 abstract class AbstractPluginTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CardDAV\Plugin
+     * @var Tine20\CardDAV\Plugin
      */
     protected $plugin;
     /**
-     * @var Sabre\DAV\Server
+     * @var Tine20\DAV\Server
      */
     protected $server;
     /**
-     * @var Sabre\CardDAV\Backend\Mock;
+     * @var Tine20\CardDAV\Backend\Mock;
      */
     protected $backend;
 

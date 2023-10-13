@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * String utility
  *
  * This class is mainly used to implement the 'text-match' filter, used by both
  * the CalDAV calendar-query REPORT, and CardDAV addressbook-query REPORT.
- * Because they both need it, it was decided to put it in Sabre\DAV instead.
+ * Because they both need it, it was decided to put it in Tine20\DAV instead.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).
  * @author Evert Pot (http://evertpot.com/)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
-use Sabre\DAVACL;
-use Sabre\DAV;
+namespace Tine20\CalDAV\Principal;
+use Tine20\DAVACL;
+use Tine20\DAV;
 
 /**
  * ProxyWrite principal

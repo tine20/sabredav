@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAV\Auth;
+namespace Tine20\DAV\Auth;
 
-use Sabre\HTTP;
-use Sabre\DAV;
+use Tine20\HTTP;
+use Tine20\DAV;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
@@ -35,7 +35,7 @@ class PluginTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @depends testInit
-     * @expectedException Sabre\DAV\Exception\NotAuthenticated
+     * @expectedException Tine20\DAV\Exception\NotAuthenticated
      */
     function testAuthenticateFail() {
 

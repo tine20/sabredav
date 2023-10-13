@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
-use Sabre\HTTP;
+use Tine20\HTTP;
 
 require_once 'Sabre/TestUtil.php';
 
@@ -10,7 +10,7 @@ class Issue33Test extends \PHPUnit_Framework_TestCase {
 
     function setUp() {
 
-        \Sabre\TestUtil::clearTempDir();
+        \Tine20\TestUtil::clearTempDir();
 
     }
 

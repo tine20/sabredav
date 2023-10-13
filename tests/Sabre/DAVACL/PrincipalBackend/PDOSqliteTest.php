@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL\PrincipalBackend;
+namespace Tine20\DAVACL\PrincipalBackend;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 require_once 'Sabre/DAV/Auth/Backend/AbstractPDOTest.php';

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CardDAV\Backend;
+namespace Tine20\CardDAV\Backend;
 
 class Mock extends AbstractBackend {
 

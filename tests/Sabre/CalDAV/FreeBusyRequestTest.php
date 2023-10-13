@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
-use Sabre\DAV;
-use Sabre\DAVACL;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\DAVACL;
+use Tine20\HTTP;
 
 require_once 'Sabre/HTTP/ResponseMock.php';
 
@@ -106,7 +106,7 @@ END:VCALENDAR',
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testNoItipMethod() {
 
@@ -123,7 +123,7 @@ ICS;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testNoVFreeBusy() {
 
@@ -141,7 +141,7 @@ ICS;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      */
     function testIncorrectOrganizer() {
 
@@ -160,7 +160,7 @@ ICS;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testNoAttendees() {
 
@@ -179,7 +179,7 @@ ICS;
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     function testNoDTStart() {
 

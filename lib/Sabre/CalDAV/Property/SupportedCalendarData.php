@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
-use Sabre\DAV;
-use Sabre\CalDAV\Plugin;
+namespace Tine20\CalDAV\Property;
+use Tine20\DAV;
+use Tine20\CalDAV\Plugin;
 
 /**
  * Supported-calendar-data property

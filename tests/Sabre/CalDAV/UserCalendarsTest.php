@@ -1,22 +1,22 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\DAVACL;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\DAVACL;
+use Tine20\DAV;
 
 require_once 'Sabre/CalDAV/TestUtil.php';
 
 /**
- * @covers Sabre\CalDAV\UserCalendars
+ * @covers Tine20\CalDAV\UserCalendars
  */
 class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @var Sabre\CalDAV\UserCalendars
+     * @var Tine20\CalDAV\UserCalendars
      */
     protected $usercalendars;
     /**
-     * @var Sabre\CalDAV\Backend\PDO
+     * @var Tine20\CalDAV\Backend\PDO
      */
     protected $backend;
 
@@ -37,7 +37,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotFound
+     * @expectedException Tine20\DAV\Exception\NotFound
      * @depends testSimple
      */
     function testGetChildNotFound() {
@@ -99,7 +99,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      */
     function testSetACL() {
 
@@ -108,7 +108,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      * @depends testSimple
      */
     function testSetName() {
@@ -118,7 +118,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\Forbidden
+     * @expectedException Tine20\DAV\Exception\Forbidden
      * @depends testSimple
      */
     function testDelete() {
@@ -137,7 +137,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      * @depends testSimple
      */
     function testCreateFile() {
@@ -148,7 +148,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
 
 
     /**
-     * @expectedException Sabre\DAV\Exception\MethodNotAllowed
+     * @expectedException Tine20\DAV\Exception\MethodNotAllowed
      * @depends testSimple
      */
     function testCreateDirectory() {
@@ -170,7 +170,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\InvalidResourceType
+     * @expectedException Tine20\DAV\Exception\InvalidResourceType
      * @depends testSimple
      */
     function testCreateExtendedCollectionBadResourceType() {
@@ -180,7 +180,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\InvalidResourceType
+     * @expectedException Tine20\DAV\Exception\InvalidResourceType
      * @depends testSimple
      */
     function testCreateExtendedCollectionNotACalendar() {
@@ -196,7 +196,7 @@ class UserCalendarsTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\NotImplemented
+     * @expectedException Tine20\DAV\Exception\NotImplemented
      */
     function testShareReplyFail() {
 

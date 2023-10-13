@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * The baseclass for all server plugins.
@@ -16,7 +16,7 @@ abstract class ServerPlugin {
     /**
      * This initializes the plugin.
      *
-     * This function is called by Sabre\DAV\Server, after
+     * This function is called by Tine20\DAV\Server, after
      * addPlugin is called.
      *
      * This method should set up the required event subscriptions.
@@ -60,7 +60,7 @@ abstract class ServerPlugin {
      * Returns a plugin name.
      *
      * Using this name other plugins will be able to access other plugins
-     * using \Sabre\DAV\Server::getPlugin
+     * using \Tine20\DAV\Server::getPlugin
      *
      * @return string
      */

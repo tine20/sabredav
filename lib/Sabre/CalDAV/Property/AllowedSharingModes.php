@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Property;
+namespace Tine20\CalDAV\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * AllowedSharingModes

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV\Property;
+namespace Tine20\CardDAV\Property;
 
-use Sabre\CardDAV;
-use Sabre\DAV;
+use Tine20\CardDAV;
+use Tine20\DAV;
 
 class SupportedAddressDataDataTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * Node class
@@ -29,7 +29,7 @@ abstract class Node implements INode {
     /**
      * Deletes the current node
      *
-     * @throws Sabre\DAV\Exception\Forbidden
+     * @throws Tine20\DAV\Exception\Forbidden
      * @return void
      */
     public function delete() {
@@ -41,7 +41,7 @@ abstract class Node implements INode {
     /**
      * Renames the node
      *
-     * @throws Sabre\DAV\Exception\Forbidden
+     * @throws Tine20\DAV\Exception\Forbidden
      * @param string $name The new name
      * @return void
      */

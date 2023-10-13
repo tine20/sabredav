@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * Collection class
@@ -21,7 +21,7 @@ abstract class Collection extends Node implements ICollection {
      * nodes, and compares the name.
      * Generally its wise to override this, as this can usually be optimized
      *
-     * This method must throw Sabre\DAV\Exception\NotFound if the node does not
+     * This method must throw Tine20\DAV\Exception\NotFound if the node does not
      * exist.
      *
      * @param string $name

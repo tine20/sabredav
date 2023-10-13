@@ -10,7 +10,7 @@
  * @license http://sabre.io/license/ Modified BSD License
  */
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 /**
  * Main Exception class.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\CalDAV;
+namespace Tine20\CalDAV;
 
 /**
  * This interface represents a Calendar that is shared by a different user.
@@ -25,7 +25,7 @@ interface ISharedCalendar extends ICalendar {
      * Every element in this array should have the following properties:
      *   * href - Often a mailto: address
      *   * commonName - Optional, for example a first + last name
-     *   * status - See the Sabre\CalDAV\SharingPlugin::STATUS_ constants.
+     *   * status - See the Tine20\CalDAV\SharingPlugin::STATUS_ constants.
      *   * readOnly - boolean
      *   * summary - Optional, a description for the share
      *

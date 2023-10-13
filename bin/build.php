@@ -78,7 +78,7 @@ function init() {
     global $version;
     if (!$version) {
         include __DIR__ . '/../vendor/autoload.php';
-        $version = Sabre\DAV\Version::VERSION;
+        $version = Tine20\DAV\Version::VERSION;
     }
 
     echo "  Building sabre/dav " . $version, "\n";

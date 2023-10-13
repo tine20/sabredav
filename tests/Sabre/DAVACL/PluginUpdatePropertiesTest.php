@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\DAVACL;
+namespace Tine20\DAVACL;
 
-use Sabre\DAV;
-use Sabre\HTTP;
+use Tine20\DAV;
+use Tine20\HTTP;
 
 
 require_once 'Sabre/DAVACL/MockPrincipal.php';
@@ -82,7 +82,7 @@ class PluginUpdatePropertiesTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception
+     * @expectedException Tine20\DAV\Exception
      */
     public function testSetBadValue() {
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\HTTP;
-use Sabre\VObject;
-use Sabre\DAV;
+namespace Tine20\CalDAV;
+use Tine20\HTTP;
+use Tine20\VObject;
+use Tine20\DAV;
 
 require_once 'Sabre/DAVServerTest.php';
 require_once 'Sabre/CalDAV/Schedule/IMip/Mock.php';
 
-class OutboxPostTest extends \Sabre\DAVServerTest {
+class OutboxPostTest extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 

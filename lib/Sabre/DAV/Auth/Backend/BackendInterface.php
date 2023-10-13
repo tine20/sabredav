@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV\Auth\Backend;
+namespace Tine20\DAV\Auth\Backend;
 
 /**
  * This is the base class for any authentication object.
@@ -17,11 +17,11 @@ interface BackendInterface {
      * If authentication is successful, true must be returned.
      * If authentication fails, an exception must be thrown.
      *
-     * @param \Sabre\DAV\Server $server
+     * @param \Tine20\DAV\Server $server
      * @param string $realm
      * @return bool
      */
-    function authenticate(\Sabre\DAV\Server $server,$realm);
+    function authenticate(\Tine20\DAV\Server $server,$realm);
 
     /**
      * Returns information about the currently logged in username.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\CardDAV;
+namespace Tine20\CardDAV;
 
-use Sabre\DAVACL;
-use Sabre\DAV;
+use Tine20\DAVACL;
+use Tine20\DAV;
 
 
 /**
@@ -242,7 +242,7 @@ class Card extends DAV\File implements ICard, DAVACL\IACL {
      * Returns the list of supported privileges for this node.
      *
      * The returned data structure is a list of nested privileges.
-     * See Sabre\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
+     * See Tine20\DAVACL\Plugin::getDefaultSupportedPrivilegeSet for a simple
      * standard structure.
      *
      * If null is returned from this method, the default privilege set is used,

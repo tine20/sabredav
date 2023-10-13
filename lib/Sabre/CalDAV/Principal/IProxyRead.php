@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV\Principal;
+namespace Tine20\CalDAV\Principal;
 
-use Sabre\DAVACL;
+use Tine20\DAVACL;
 
 /**
  * ProxyRead principal interface

@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\DAV\FS;
-use Sabre\DAV;
+namespace Tine20\DAV\FS;
+use Tine20\DAV;
 
 /**
  * Directory class

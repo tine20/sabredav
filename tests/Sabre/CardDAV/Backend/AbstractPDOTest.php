@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CardDAV\Backend;
+namespace Tine20\CardDAV\Backend;
 
-use Sabre\CardDAV;
+use Tine20\CardDAV;
 
 abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
 
@@ -133,7 +133,7 @@ abstract class AbstractPDOTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\DAV\Exception\BadRequest
+     * @expectedException Tine20\DAV\Exception\BadRequest
      */
     public function testCreateAddressBookUnsupportedProp() {
 

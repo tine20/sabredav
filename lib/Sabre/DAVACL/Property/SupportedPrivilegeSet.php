@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\DAVACL\Property;
+namespace Tine20\DAVACL\Property;
 
-use Sabre\DAV;
+use Tine20\DAV;
 
 /**
  * SupportedPrivilegeSet property
@@ -11,7 +11,7 @@ use Sabre\DAV;
  * in rfc3744. Please consult the rfc for details about it's structure.
  *
  * This class expects a structure like the one given from
- * Sabre\DAVACL\Plugin::getSupportedPrivilegeSet as the argument in its
+ * Tine20\DAVACL\Plugin::getSupportedPrivilegeSet as the argument in its
  * constructor.
  *
  * @copyright Copyright (C) 2007-2015 fruux GmbH (https://fruux.com/).

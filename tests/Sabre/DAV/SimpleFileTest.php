@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\DAV;
+namespace Tine20\DAV;
 
 class SimpleFileTest extends \PHPUnit_Framework_TestCase {
 

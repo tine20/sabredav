@@ -111,11 +111,11 @@
 
 1.7.8-stable (2013-06-17)
 	* The zip release ships with sabre/vobject 2.1.0.
-	* Changed: Sabre\DAV\Client::verifyPeer is now a protected property
+	* Changed: Tine20\DAV\Client::verifyPeer is now a protected property
 	 (instead of private).
 	* Fixed: Text was incorrectly escaped in the Href and HrefList properties,
 	  disallowing urls with ampersands (&) in them.
-	* Added: deserializer for Sabre\DAVACL\Property\CurrentUserPrivilegeSet.
+	* Added: deserializer for Tine20\DAVACL\Property\CurrentUserPrivilegeSet.
 	* Fixed: Issue 335: Client only deserializes properties with status 200.
 	* Fixed: Issue 341: Escaping xml in 423 Locked error responses.
 	* Added: Issue 339: beforeGetPropertiesForPath event.

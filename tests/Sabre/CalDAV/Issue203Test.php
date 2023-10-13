@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\CalDAV;
-use Sabre\HTTP;
-use Sabre\VObject;
+namespace Tine20\CalDAV;
+use Tine20\HTTP;
+use Tine20\VObject;
 
 /**
  * This unittest is created to find out why an overwritten DAILY event has wrong DTSTART, DTEND, SUMMARY and RECURRENCEID
@@ -12,7 +12,7 @@ use Sabre\VObject;
  * @author Evert Pot (http://evertpot.com/)
  * @license http://sabre.io/license/ Modified BSD License
  */
-class Issue203Test extends \Sabre\DAVServerTest {
+class Issue203Test extends \Tine20\DAVServerTest {
 
     protected $setupCalDAV = true;
 
@@ -117,10 +117,10 @@ END:VCALENDAR
             $matching = false;
 
             foreach ($vObject->VEVENT as $vevent) {
-                /** @var $vevent Sabre\VObject\Component\VEvent */
+                /** @var $vevent Tine20\VObject\Component\VEvent */
 
                 foreach ($vevent->children as $child) {
-                    /** @var $child Sabre\VObject\Property */
+                    /** @var $child Tine20\VObject\Property */
 
                     if (isset($expectedEvent[$child->name])) {
                         if ($expectedEvent[$child->name] != $child->getValue()) {
