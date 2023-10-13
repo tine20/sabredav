@@ -1,5 +1,5 @@
 {
-    "name": "sabre/dav",
+    "name": "tine20/sabredav",
     "type": "library",
     "description": "WebDAV Framework for PHP",
     "keywords": ["Framework", "WebDAV", "CalDAV", "CardDAV", "iCalendar"],
