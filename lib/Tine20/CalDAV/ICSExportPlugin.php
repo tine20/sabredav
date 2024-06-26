@@ -56,7 +56,7 @@ class ICSExportPlugin extends DAV\ServerPlugin {
 
         $node = $this->server->tree->getNodeForPath($uri);
 
-        if (!($node instanceof Calendar)) return;
+        if (!($node instanceof ICalendar)) return;
 
         // Checking ACL, if available.
         if ($aclPlugin = $this->server->getPlugin('acl')) {
